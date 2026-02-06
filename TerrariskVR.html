@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TerrariskVR | Mans Léo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        /* Style spécifique pour la vidéo responsive */
+        .ratio-16x9 {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .tech-card {
+            background-color: #212529;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5 mt-4">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="mb-3">
+                    <span class="badge bg-primary">Unity 2023</span>
+                    <span class="badge bg-secondary">VR / Oculus Quest</span>
+                    <span class="badge border border-primary text-primary">Recherche</span>
+                </div>
+                <h1 class="display-4 fw-bold text-white">TerrariskVR</h1>
+                <p class="lead text-secondary">
+                    Application de sensibilisation aux risques d'éboulements pour GRDF. 
+                    Simulation physique temps réel et pédagogie immersive.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
+                    <a href="#" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/TonIDVideo" title="YouTube video" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="container py-4">
+        <div class="row g-5">
+            
+            <div class="col-lg-8">
+                
+                <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
+                <p>
+                    L'objectif de ce projet était de créer un outil de formation immersif pour les techniciens GRDF. 
+                    Les méthodes d'apprentissage classiques (PowerPoint) ne permettaient pas de visualiser correctement 
+                    le danger d'un éboulement de terrain lors de travaux de fouille.
+                </p>
+                <p>
+                    Nous avons donc conçu un scénario en Réalité Virtuelle où l'utilisateur doit sécuriser une zone 
+                    avant qu'un accident simulé par le moteur physique ne se produise.
+                </p>
+
+                <hr class="my-5 border-secondary">
+
+                <h3 class="text-white fw-bold mb-3"><i class="bi bi-cpu text-primary me-2"></i>Challenges Techniques</h3>
+                
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">1. Simulation Physique Optimisée</h5>
+                    <p class="text-secondary">
+                        Pour simuler l'éboulement de manière réaliste sur un casque autonome (Quest 2), 
+                        j'ai dû éviter d'utiliser trop de `Rigidbodies`. J'ai opté pour une approche hybride : 
+                        une animation pré-calculée (Vertex Animation) pour la masse de terre, couplée à quelques 
+                        objets physiques pour l'interaction avec le joueur.
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">2. Interaction Main-Objet (Hand Tracking)</h5>
+                    <p class="text-secondary">
+                        Utilisation du SDK Oculus Interaction pour permettre la manipulation des outils (pelles, barrières) 
+                        sans manettes, directement avec le suivi des mains, pour plus d'immersion.
+                    </p>
+                </div>
+
+                <h3 class="text-white fw-bold mt-5 mb-3">Galerie</h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <img src="https://via.placeholder.com/600x400" class="img-fluid rounded-4 shadow" alt="Screenshot 1">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://via.placeholder.com/600x400" class="img-fluid rounded-4 shadow" alt="Screenshot 2">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="tech-card p-4 sticky-top" style="top: 100px;">
+                    <h4 class="fw-bold mb-4">Fiche Technique</h4>
+                    
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
+                            <span>Développeur Principal / Chercheur</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="d-block text-secondary text-uppercase small">Durée</strong>
+                            <span>4 mois (Sept - Jan 2026)</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
+                            <span>2 Développeurs, 1 Graphiste 3D</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
+                            <div class="mt-2 d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark border border-secondary">C#</span>
+                                <span class="badge bg-dark border border-secondary">Unity 2022 LTS</span>
+                                <span class="badge bg-dark border border-secondary">OpenXR</span>
+                                <span class="badge bg-dark border border-secondary">Blender</span>
+                                <span class="badge bg-dark border border-secondary">Git</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <hr class="border-secondary">
+                    
+                    <h5 class="fw-bold mb-3 small">Compétences clés</h5>
+                    <ul class="text-secondary small ps-3">
+                        <li>Optimisation GPU (Drawcalls)</li>
+                        <li>Physics Engine Unity</li>
+                        <li>UX Design en VR</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-body-tertiary text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2026 Mans Léo Portfolio</p>
+            <a href="index.html" class="small text-decoration-none">Retour à l'accueil</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
