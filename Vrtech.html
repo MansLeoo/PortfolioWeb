@@ -3,47 +3,50 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vertech' | Mans Léo</title>
+    <title>VR'tech | Mans Léo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
         .ratio-16x9 {
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             border: 1px solid rgba(255,255,255,0.1);
         }
-        
         .tech-card {
             background-color: #212529;
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 12px;
         }
-
-        /* Petit effet au survol des images de la galerie */
-        .gallery-img {
-            transition: transform 0.3s ease;
-        }
-        .gallery-img:hover {
-            transform: scale(1.02);
-            filter: brightness(1.1);
-        }
+        .gallery-img { transition: transform 0.3s ease; }
+        .gallery-img:hover { transform: scale(1.02); filter: brightness(1.1); }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
-            <div class="ms-auto">
-                <a href="index.html" class="btn btn-outline-light btn-sm">
-                    <i class="bi bi-arrow-left"></i> Retour aux projets
-                </a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
+        
+        <div class="ms-auto d-flex align-items-center gap-3">
+            
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-translate me-1"></i> FR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
+                    <li><a class="dropdown-item" href="vertech-en.html">🇬🇧 English</a></li>
+                </ul>
             </div>
+
+            <a href="index.html" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-arrow-left"></i> Retour
+            </a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <section class="container py-5 mt-4">
         <div class="row align-items-center">
@@ -56,14 +59,12 @@
                 </div>
                 <h1 class="display-4 fw-bold text-white">VR'tech</h1>
                 <p class="lead text-secondary">
-                    Application de visualisation et de formation en réalité 
-                    virtuelle permettant de découvrir le métier et 
-                    de former de nouveaux opérateurs au contrôle 
-                    qualité. Application développée pour l'entreprise Vertech'.
+                    Solution de formation en réalité virtuelle dédiée au contrôle qualité industriel. 
+                    Développée pour Vertech', l'application permet d'immerger les nouveaux opérateurs dans le processus de production verrière.
                 </p>
                 <div class="d-flex gap-3 mt-4">
-                    <a href="https://github.com/MansLeoo/TerrariskVR" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
-                    <a href="TerrariskVR/TerrariskVR_pres.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
+                    <a href="https://github.com/MansLeoo/VRtech" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
+                    <a href="Vertech/Vrtech.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
                 </div>
             </div>
         </div>
@@ -73,7 +74,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/OMZlc-c2gLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/OMZlc-c2gLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -81,58 +82,48 @@
 
     <section class="container py-4">
         <div class="row g-5">
-            
             <div class="col-lg-8">
                 <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
                 <p>
-                    Dans le cadre du Défi Chal'enge, j'ai piloté une équipe pluridisciplinaire pour répondre à une problématique de GRDF : le manque d'impact des formations sécurité traditionnelles (PowerPoint, maquettes).
-
-Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle immersive. Plongé dans un chantier de rue pavillonnaire, l'apprenant a la liberté de descendre dans une tranchée non sécurisée pour vivre un ensevelissement de l'intérieur, accident déclenché par les vibrations d'un camion à proximité.
+                    Dans le cadre du <strong>Défi Chal'enge</strong>, j'ai piloté le développement d'une application Unity pour l'entreprise <strong>Vertech'</strong>. 
+                    L'objectif était de reproduire fidèlement une ligne de production verrière incluant deux pôles de formation stratégiques : 
+                    le contrôle qualité "bout chaud" (sortie de four) et le contrôle qualité "bout froid".
+                </p>
+                <p>
+                    J'ai pris en charge la logique de déplacement des bouteilles via un système de <strong>Waypoints</strong>, le développement des interactions utilisateur (saisie, inspection) ainsi que l'intégration d'interfaces d'information contextuelles.
                 </p>
 
+                <hr class="my-5 border-secondary">
+                 
+                <h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
 
-<hr class="my-5 border-secondary">
- 
-<h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">1. Système de flux logistique</h5>
+                    <p class="text-secondary">Conception d'un système de navigation précis pour les bouteilles sur les convoyeurs, incluant des aiguillages intelligents vers les différentes machines d'inspection selon des probabilités de défauts.</p>
+                </div>
 
-<div class="mb-4">
-    <h5 class="fw-bold text-light">1. Simulation Physique (Blender → Unity)</h5>
-    <p >Pour garantir un rendu visuel impressionnant sans impacter les performances temps réel, j'ai déporté le calcul physique de l'éboulement sur Blender. La simulation de destruction a été pré-calculée (baked), puis exportée sous forme d'animation optimisée vers Unity. Cette approche hybride offre un rendu exploitable tout en maintenant un framerate stable sur le casque VR.</p>
-</div>
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">2. Optimisation et préparation 3D</h5>
+                    <p class="text-secondary">Nettoyage et découpage de modèles CAO complexes fournis par l'entreprise afin de permettre l'animation des composants mécaniques et de garantir la fluidité sur Meta Quest 3.</p>
+                </div>
 
-<div class="mb-4">
-    <h5 class="fw-bold text-light">2. Optimisation Meta Quest 3 (Standalone)</h5>
-    <p >
-        L'application devait tourner de manière autonome (sans PC) sur le meta Quest 3.
-        J'ai dû faire en sorte que les modeles 3D soient optimisé, qu'il n'y est aps trop de lumiere et que l'animation d'énoulement ne sois pas trop lourde pour garantir une fluidité parfaite (72/90 FPS) malgré la complexité de la scène 3D.
-    </p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">3. Gestion d'équipe (6 personnes)</h5>
-    <p >
-        Au-delà du développement, j'ai assuré le lead technique et organisationnel d'une <strong>équipe de 6 personnes</strong> (graphistes et développeurs).
-        Mise en place du workflow Git, répartition des tâches et respect d'une deadline courte (2 semaines) dans le cadre du Défi Chal'enge.
-    </p>
-</div>
-</div>
+            </div>
 
             <div class="col-lg-4">
                 <div class="tech-card p-4 sticky-top" style="top: 100px;">
                     <h4 class="fw-bold mb-4">Fiche Technique</h4>
-                    
                     <ul class="list-unstyled">
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
-                            <span>Chef de projet / Développeur / Graphiste 3D / Monteur Vidéo</span>
+                            <span> Développeur / Graphiste 3D</span>
                         </li>
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Durée</strong>
-                            <span>2 semaines (Jan 19 - Jan 30)</span>
+                            <span>2 semaines (Jan 2025)</span>
                         </li>
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
-                            <span>1 Développeur, 4 Graphistes 3D</span>
+                            <span>2 Développeurs, 3 Graphistes 3D</span>
                         </li>
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
@@ -142,65 +133,45 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
                                 <span class="badge bg-dark border border-secondary">OpenXR</span>
                                 <span class="badge bg-dark border border-secondary">Blender</span>
                                 <span class="badge bg-dark border border-secondary">3dsMax</span>
-                                <span class="badge bg-dark border border-secondary">MetaQuest3</span>
                                 <span class="badge bg-dark border border-secondary">Git</span>
                             </div>
                         </li>
                     </ul>
-
                     <hr class="border-secondary">
-                    
                     <h5 class="fw-bold mb-3 small">Compétences clés</h5>
                     <ul class="text-secondary small ps-3">
-                        <li>Simulation Physique sur Blender</li>
-                        <li>Optimisation sur Unity</li>
-                        <li>UX Design en VR</li>
+                        <li>Animation mécanique (3ds Max)</li>
+                        <li>Logique de flux (Waypoints Unity)</li>
+                        <li>Optimisation d'assets CAO</li>
                     </ul>
                 </div>
             </div>
-
         </div>
     </section>
+
 
     <section class="container py-5">
         <h3 class="text-white fw-bold mb-4"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
         <div class="row g-3">
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Vertech/img/Vertech1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Vertech/img/Vertech2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Vertech/img/Vertech3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Vertech/img/Vertech4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Vertech/img/Vertech5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Vertech/img/Vertech6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env7.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env8.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Stand_Chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Stand de présentation TerrariskVR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Prix__chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Prix de l'innovation obtenu" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre1.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre2.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
+    
         </div>
     </section>
 
@@ -244,6 +215,5 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
             }
         });
     </script>
-
 </body>
 </html>
