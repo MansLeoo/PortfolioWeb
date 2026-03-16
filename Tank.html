@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TerrariskVR | Mans Léo</title>
+    <title>Projet Tank | Mans Léo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
@@ -22,7 +22,6 @@
             border-radius: 12px;
         }
 
-        /* Petit effet au survol des images de la galerie */
         .gallery-img {
             transition: transform 0.3s ease;
         }
@@ -34,46 +33,45 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
-        
-        <div class="ms-auto d-flex align-items-center gap-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
             
-            <div class="dropdown">
-                <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-translate me-1"></i> FR
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
-                    <li><a class="dropdown-item" href="vertech-en.html">🇬🇧 English</a></li>
-                </ul>
-            </div>
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-translate me-1"></i> FR
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
+                        <li><a class="dropdown-item" href="tank-en.html">🇬🇧 English</a></li>
+                    </ul>
+                </div>
 
-            <a href="index.html" class="btn btn-outline-light btn-sm">
-                <i class="bi bi-arrow-left"></i> Retour
-            </a>
+                <a href="index.html" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-arrow-left"></i> Retour
+                </a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <section class="container py-5 mt-4">
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <div class="mb-3">
-                    <span class="badge bg-primary">Défi Chal'enge</span>
+                    <span class="badge bg-primary">Projet Universitaire</span>
                     <span class="badge border border-primary text-primary">Unity</span>
-                    <span class="badge border border-primary text-primary">VR</span>
-                    <span class="badge border border-primary text-primary">Formation</span>
+                    <span class="badge border border-primary text-primary">Jeux-vidéo</span>
+                    <span class="badge border border-primary text-primary">C#</span>
                 </div>
-                <h1 class="display-4 fw-bold text-white">TerrariskVR</h1>
+                <h1 class="display-4 fw-bold text-white">Projet Tank</h1>
                 <p class="lead text-secondary">
-                    Application de sensibilisation aux risques d'éboulements pour GRDF. 
-                    Simulation physique temps réel et pédagogie immersive.
+                    Développement d'un jeu PC sur Unity centré sur l'architecture du code, 
+                    les mécaniques de gameplay et la gestion de l'environnement interactif.
                 </p>
                 <div class="d-flex gap-3 mt-4">
-                    <a href="https://github.com/MansLeoo/TerrariskVR" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
-                    <a href="TerrariskVR/TerrariskVR_pres.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
+                    <a href="https://github.com/MansLeoo/TankProject" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
+                    <a href="Tank/Rapport_Tank.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
                 </div>
             </div>
         </div>
@@ -83,7 +81,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/tAE0wr52C2k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -95,37 +93,55 @@
             <div class="col-lg-8">
                 <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
                 <p>
-                    Dans le cadre du Défi Chal'enge, j'ai piloté une équipe pluridisciplinaire pour répondre à une problématique de GRDF : le manque d'impact des formations sécurité traditionnelles (PowerPoint, maquettes).
-
-Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle immersive. Plongé dans un chantier de rue pavillonnaire, l'apprenant a la liberté de descendre dans une tranchée non sécurisée pour vivre un ensevelissement de l'intérieur, accident déclenché par les vibrations d'un camion à proximité.
+                    L'objectif de ce projet était de développer une application PC dans Unity dans laquelle le joueur contrôle un char sur un terrain interactif. Le jeu inclut un système de gestion des dégâts, deux types de projectiles, des obstacles destructibles, une interface utilisateur et des éléments audio.
+                </p>
+                <p>
+                    Les contrôles s'effectuent via le clavier et la souris, avec une caméra dynamique et une interface de sélection de char.
+                </p>
+                <p>
+                    Le projet met l'accent sur la fonctionnalité (plutôt que sur la conception visuelle), l'organisation du code, la clarté des scripts et le respect strict des exigences de gameplay.
                 </p>
 
+                <hr class="my-5 border-secondary">
 
-<hr class="my-5 border-secondary">
- 
-<h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">1. Simulation Physique (Blender → Unity)</h5>
-    <p >Pour garantir un rendu visuel impressionnant sans impacter les performances temps réel, j'ai déporté le calcul physique de l'éboulement sur Blender. La simulation de destruction a été pré-calculée (baked), puis exportée sous forme d'animation optimisée vers Unity. Cette approche hybride offre un rendu exploitable tout en maintenant un framerate stable sur le casque VR.</p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">2. Optimisation Meta Quest 3 (Standalone)</h5>
-    <p >
-        L'application devait tourner de manière autonome (sans PC) sur le meta Quest 3.
-        J'ai dû faire en sorte que les modeles 3D soient optimisé, qu'il n'y est aps trop de lumiere et que l'animation d'énoulement ne sois pas trop lourde pour garantir une fluidité parfaite (72/90 FPS) malgré la complexité de la scène 3D.
-    </p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">3. Gestion d'équipe (6 personnes)</h5>
-    <p >
-        Au-delà du développement, j'ai assuré le lead technique et organisationnel d'une <strong>équipe de 6 personnes</strong> (graphistes et développeurs).
-        Mise en place du workflow Git, répartition des tâches et respect d'une deadline courte (2 semaines) dans le cadre du Défi Chal'enge.
-    </p>
-</div>
-</div>
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-card-checklist text-primary me-2"></i>Évaluation du Projet</h3>
+                
+                <div class="table-responsive shadow-lg rounded-4 overflow-hidden border border-secondary mb-4">
+                    <table class="table table-dark table-striped table-hover align-middle mb-0">
+                        <thead class="table-active text-uppercase small">
+                            <tr>
+                                <th scope="col" class="py-3 px-4">Critère d'évaluation</th>
+                                <th scope="col" class="text-center py-3">Barème</th>
+                                <th scope="col" class="text-center py-3 text-primary">Note Obtenue</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr><td class="px-4">Organisation du projet</td><td class="text-center text-secondary">2</td><td class="text-center fw-bold text-success">2</td></tr>
+                            <tr><td class="px-4">Organisation de la scène</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-warning">0.75</td></tr>
+                            <tr><td class="px-4">Livrable</td><td class="text-center text-secondary">2</td><td class="text-center fw-bold text-success">2</td></tr>
+                            <tr><td class="px-4">Clarté des scripts</td><td class="text-center text-secondary">2</td><td class="text-center fw-bold text-success">2</td></tr>
+                            <tr><td class="px-4">Terrain</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-warning">0.75</td></tr>
+                            <tr><td class="px-4">Mouvement (char + canon)</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Gestion des projectiles</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Gestion des entrées (contrôles)</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Prefabs</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Interface utilisateur (UI)</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Obstacles</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Audio</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Build fonctionnel</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                            <tr><td class="px-4">Gameplay (respect des exigences)</td><td class="text-center text-secondary">2</td><td class="text-center fw-bold text-success">2</td></tr>
+                            <tr><td class="px-4 fst-italic">Bonus*</td><td class="text-center text-secondary">1</td><td class="text-center fw-bold text-success">1</td></tr>
+                        </tbody>
+                        <tfoot class="table-group-divider">
+                            <tr class="table-active fs-5">
+                                <td class="text-end fw-bold px-4 py-3">TOTAL</td>
+                                <td class="text-center text-secondary py-3">--</td>
+                                <td class="text-center fw-bold text-primary py-3">19.5 <span class="fs-6 text-secondary fw-normal">/ 20</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
 
             <div class="col-lg-4">
                 <div class="tech-card p-4 sticky-top" style="top: 100px;">
@@ -134,25 +150,18 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
                     <ul class="list-unstyled">
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
-                            <span>Chef de projet / Développeur / Graphiste 3D / Monteur Vidéo</span>
+                            <span>Développeur Unity / Graphiste 3D</span>
                         </li>
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Durée</strong>
-                            <span>2 semaines (Jan 19 - Jan 30)</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
-                            <span>1 Développeur, 4 Graphistes 3D</span>
+                            <span>1 mois</span>
                         </li>
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
                             <div class="mt-2 d-flex flex-wrap gap-2">
                                 <span class="badge bg-dark border border-secondary">C#</span>
-                                <span class="badge bg-dark border border-secondary">Unity 6</span>
-                                <span class="badge bg-dark border border-secondary">OpenXR</span>
-                                <span class="badge bg-dark border border-secondary">Blender</span>
-                                <span class="badge bg-dark border border-secondary">3dsMax</span>
-                                <span class="badge bg-dark border border-secondary">MetaQuest3</span>
+                                <span class="badge bg-dark border border-secondary">Unity 2022</span>
+                                <span class="badge bg-dark border border-secondary">3ds Max</span>
                                 <span class="badge bg-dark border border-secondary">Git</span>
                             </div>
                         </li>
@@ -162,9 +171,9 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
                     
                     <h5 class="fw-bold mb-3 small">Compétences clés</h5>
                     <ul class="text-secondary small ps-3">
-                        <li>Simulation Physique sur Blender</li>
-                        <li>Optimisation sur Unity</li>
-                        <li>UX Design en VR</li>
+                        <li>Développement de mécaniques C#</li>
+                        <li>Architecture de projet Unity</li>
+                        <li>Gestion de physique & Input System</li>
                     </ul>
                 </div>
             </div>
@@ -176,40 +185,22 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         <h3 class="text-white fw-bold mb-4"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
         <div class="row g-3">
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tank/img/TANK.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Vue en jeu du tank" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tank/img/ennemies.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Les ennemis" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tank/img/menu.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Interface du menu principal" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tank/img/ammo.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Balles" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tank/img/tankModel.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Modèle 3D du char" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env7.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env8.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Stand_Chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Stand de présentation TerrariskVR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Prix__chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Prix de l'innovation obtenu" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre1.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre2.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tank/img/Joueur.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Vue joueur" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
         </div>
     </section>

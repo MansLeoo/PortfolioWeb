@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TerrariskVR | Mans Léo</title>
+    <title>Tramway Divia | Mans Léo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
@@ -22,7 +22,6 @@
             border-radius: 12px;
         }
 
-        /* Petit effet au survol des images de la galerie */
         .gallery-img {
             transition: transform 0.3s ease;
         }
@@ -34,60 +33,50 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
-        
-        <div class="ms-auto d-flex align-items-center gap-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
             
-            <div class="dropdown">
-                <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-translate me-1"></i> FR
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
-                    <li><a class="dropdown-item" href="vertech-en.html">🇬🇧 English</a></li>
-                </ul>
-            </div>
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-translate me-1"></i> FR
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
+                        <li><a class="dropdown-item" href="tram-en.html">🇬🇧 English</a></li>
+                    </ul>
+                </div>
 
-            <a href="index.html" class="btn btn-outline-light btn-sm">
-                <i class="bi bi-arrow-left"></i> Retour
-            </a>
+                <a href="index.html" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-arrow-left"></i> Retour
+                </a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <section class="container py-5 mt-4">
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <div class="mb-3">
-                    <span class="badge bg-primary">Défi Chal'enge</span>
+                    <span class="badge bg-primary">Modélisation 3D</span>
                     <span class="badge border border-primary text-primary">Unity</span>
-                    <span class="badge border border-primary text-primary">VR</span>
-                    <span class="badge border border-primary text-primary">Formation</span>
+                    <span class="badge border border-primary text-primary">3ds Max</span>
+                    <span class="badge border border-primary text-primary">Animation</span>
                 </div>
-                <h1 class="display-4 fw-bold text-white">TerrariskVR</h1>
+                <h1 class="display-4 fw-bold text-white">Rendu 3D du tramway de Dijon</h1>
                 <p class="lead text-secondary">
-                    Application de sensibilisation aux risques d'éboulements pour GRDF. 
-                    Simulation physique temps réel et pédagogie immersive.
+                    Modélisation et intégration temps réel dans Unity du tramway Divia de Dijon.
                 </p>
                 <div class="d-flex gap-3 mt-4">
-                    <a href="https://github.com/MansLeoo/TerrariskVR" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
-                    <a href="TerrariskVR/TerrariskVR_pres.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
+                    <a href="https://github.com/MansLeoo/Tram" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
+                    <a href="Tram/Tram_pres.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container mb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section class="container py-4">
         <div class="row g-5">
@@ -95,37 +84,30 @@
             <div class="col-lg-8">
                 <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
                 <p>
-                    Dans le cadre du Défi Chal'enge, j'ai piloté une équipe pluridisciplinaire pour répondre à une problématique de GRDF : le manque d'impact des formations sécurité traditionnelles (PowerPoint, maquettes).
-
-Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle immersive. Plongé dans un chantier de rue pavillonnaire, l'apprenant a la liberté de descendre dans une tranchée non sécurisée pour vivre un ensevelissement de l'intérieur, accident déclenché par les vibrations d'un camion à proximité.
+                    Ce projet consiste à créer une scène animée en temps réel représentant le tramway Divia de Dijon dans un environnement urbain. Il illustre l'arrivée du tramway, son arrêt en station, l'ouverture des portes, puis son départ. 
+                </p>
+                <p>
+                    La modélisation a été entièrement réalisée dans 3ds Max et intégrée dans Unity, avec pour objectif de produire un rendu réaliste et immersif sans utiliser de modèles 3D externes.
                 </p>
 
+                <hr class="my-5 border-secondary">
+                
+                <h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
 
-<hr class="my-5 border-secondary">
- 
-<h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">1. Reproduction d'un environnement réel</h5>
+                    <p class="text-secondary">
+                        Le défi principal a été de recréer fidèlement le design du tramway Divia et de sa station urbaine à partir de références réelles, en modélisant chaque élément de zéro pour garantir la cohérence visuelle de la scène.
+                    </p>
+                </div>
 
-<div class="mb-4">
-    <h5 class="fw-bold text-light">1. Simulation Physique (Blender → Unity)</h5>
-    <p >Pour garantir un rendu visuel impressionnant sans impacter les performances temps réel, j'ai déporté le calcul physique de l'éboulement sur Blender. La simulation de destruction a été pré-calculée (baked), puis exportée sous forme d'animation optimisée vers Unity. Cette approche hybride offre un rendu exploitable tout en maintenant un framerate stable sur le casque VR.</p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">2. Optimisation Meta Quest 3 (Standalone)</h5>
-    <p >
-        L'application devait tourner de manière autonome (sans PC) sur le meta Quest 3.
-        J'ai dû faire en sorte que les modeles 3D soient optimisé, qu'il n'y est aps trop de lumiere et que l'animation d'énoulement ne sois pas trop lourde pour garantir une fluidité parfaite (72/90 FPS) malgré la complexité de la scène 3D.
-    </p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">3. Gestion d'équipe (6 personnes)</h5>
-    <p >
-        Au-delà du développement, j'ai assuré le lead technique et organisationnel d'une <strong>équipe de 6 personnes</strong> (graphistes et développeurs).
-        Mise en place du workflow Git, répartition des tâches et respect d'une deadline courte (2 semaines) dans le cadre du Défi Chal'enge.
-    </p>
-</div>
-</div>
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">2. Optimisation des performances</h5>
+                    <p class="text-secondary">
+                        Afin de maintenir une fréquence d'images élevée en temps réel, il a fallu identifier les modèles de second plan pour réduire leur complexité polygonale (LOD) et optimiser leurs textures, tout en gérant intelligemment les éléments d'arrière-plan (fond de scène).
+                    </p>
+                </div>
+            </div>
 
             <div class="col-lg-4">
                 <div class="tech-card p-4 sticky-top" style="top: 100px;">
@@ -134,26 +116,17 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
                     <ul class="list-unstyled">
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
-                            <span>Chef de projet / Développeur / Graphiste 3D / Monteur Vidéo</span>
+                            <span>Graphiste 3D / Intégrateur</span>
                         </li>
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Durée</strong>
-                            <span>2 semaines (Jan 19 - Jan 30)</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
-                            <span>1 Développeur, 4 Graphistes 3D</span>
+                            <span>2 mois</span>
                         </li>
                         <li class="mb-3">
                             <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
                             <div class="mt-2 d-flex flex-wrap gap-2">
-                                <span class="badge bg-dark border border-secondary">C#</span>
-                                <span class="badge bg-dark border border-secondary">Unity 6</span>
-                                <span class="badge bg-dark border border-secondary">OpenXR</span>
-                                <span class="badge bg-dark border border-secondary">Blender</span>
-                                <span class="badge bg-dark border border-secondary">3dsMax</span>
-                                <span class="badge bg-dark border border-secondary">MetaQuest3</span>
-                                <span class="badge bg-dark border border-secondary">Git</span>
+                                <span class="badge bg-dark border border-secondary">Unity 2022</span>
+                                <span class="badge bg-dark border border-secondary">3ds Max</span>
                             </div>
                         </li>
                     </ul>
@@ -162,9 +135,9 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
                     
                     <h5 class="fw-bold mb-3 small">Compétences clés</h5>
                     <ul class="text-secondary small ps-3">
-                        <li>Simulation Physique sur Blender</li>
-                        <li>Optimisation sur Unity</li>
-                        <li>UX Design en VR</li>
+                        <li>Modélisation 3D (3ds Max)</li>
+                        <li>Animation de scène temps réel</li>
+                        <li>Optimisation des assets (Unity)</li>
                     </ul>
                 </div>
             </div>
@@ -176,40 +149,25 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         <h3 class="text-white fw-bold mb-4"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
         <div class="row g-3">
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tram/img/Env1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Vue d'ensemble du tram" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tram/img/Env2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Détail de la station" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tram/img/Env3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Arrivée en station" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tram/img/Env4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Ouverture des portes" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tram/img/Env5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement urbain" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tram/img/Env6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Textures et matériaux" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
             <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env7.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env8.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Stand_Chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Stand de présentation TerrariskVR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Prix__chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Prix de l'innovation obtenu" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre1.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre2.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                <img src="Tram/img/Env7.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Éclairage temps réel" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
             </div>
         </div>
     </section>
