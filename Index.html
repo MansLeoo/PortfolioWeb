@@ -3,44 +3,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mans Léo | Portfolio XR & Recherche</title>
+    <title>Léo Mans | Portfolio XR & Recherche</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         .hero-section { padding: 100px 0; }
         .card-img-top { height: 200px; object-fit: cover; }
-        /* Optionnel : effet de survol pour plus de relief */
+        /* Effet de survol pour les cartes et boutons */
         .card { transition: transform 0.3s ease; }
         .card:hover { transform: translateY(-5px); }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: translateY(-5px); }
+        .timeline-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#">Mans Léo Portfolio</a>
+            <a class="navbar-brand fw-bold" href="#">Portfolio Léo Mans</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-
-                            <div class="dropdown">
-                <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-translate me-1"></i> FR
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
-                    <li><a class="dropdown-item" href="vertech-en.html">🇬🇧 English</a></li>
-                </ul>
-            </div>
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                <div class="dropdown me-lg-3">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-translate me-1"></i> FR
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
+                        <li><a class="dropdown-item" href="Indexen.html">🇬🇧 English</a></li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
                     <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-3" href="#contact">Me contacter</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-3 px-3 text-white" href="#contact">Me contacter</a></li>
                 </ul>
             </div>
         </div>
@@ -48,25 +50,107 @@
 
     <section class="hero-section text-center container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h1 class="display-4 fw-bold">Mans Léo</h1>
+            <div class="col-md-9">
+                <h1 class="display-4 fw-bold">Léo Mans</h1>
                 <p class="lead my-4">
-                    Étudiant en Master Recherche • <span class="text-primary fw-bold">Réalité Mixte (XR)</span>
+                    Étudiant en Master Technologies Immersives • <span class="text-primary fw-bold">À la recherche d'une thèse en VR</span>
                 </p>
-                <a href="#projets" class="btn btn-outline-light btn-lg"><i class="bi bi-code-slash"></i> Voir mon travail</a>
-                <a href="https://github.com/MansLeoo" target="_blank" class="btn btn-dark btn-lg ms-2"><i class="bi bi-github"></i> GitHub</a>
             </div>
         </div>
     </section>
 
-    <section id="projets" class="container py-5">
+    <section id="about" class="container py-5 mt-4 border-top border-secondary">
+        <div class="row justify-content-between align-items-center g-5">
+            <div class="col-lg-6">
+                <h2 class="fw-bold d-inline-block border-bottom border-3 border-primary pb-2 mb-4">À propos de moi</h2>
+                <p class="lead text-light mb-3">
+                    Actuellement étudiant en Master spécialisé dans les Technologies Immersives, je suis activement à la recherche d'une opportunité de doctorat en Réalité Virtuelle.
+                </p>
+                <p class="text-light mb-4">
+                    Ayant développé diverses applications VR, mes intérêts de recherche se concentrent sur trois piliers : la <strong>VR Sociale</strong> (analyse du comportement et de la co-présence), l'<strong>Informatique Affective</strong> (amélioration des émotions) et l'<strong>Augmentation Humaine</strong> (entraînement cognitif et comportemental). Mon objectif est de repousser les limites de la VR pour mieux comprendre et élever le potentiel humain.
+                </p>
+                <a href="CV_Mans_Leo.pdf" target="_blank" class="btn btn-primary btn-lg mt-2 shadow-sm rounded-pill px-4 hover-scale">
+                    <i class="bi bi-file-earmark-person-fill me-2"></i>Télécharger mon CV
+                </a>
+            </div>
+            
+            <div class="col-lg-5">
+                <div class="card bg-dark border-secondary shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold text-white mb-4"><i class="bi bi-journal-bookmark-fill text-primary me-2"></i>Mon Parcours</h5>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="timeline-icon bg-primary bg-opacity-25 text-primary me-3 flex-shrink-0">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Étudiant Chercheur Invité</h6>
+                                <p class="text-light small mb-0">HKUST, Guangzhou, Chine (Fév - Août 2026)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="timeline-icon bg-secondary bg-opacity-25 text-light me-3 flex-shrink-0">
+                                <i class="bi bi-mortarboard-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Master en Ingénierie Industrielle</h6>
+                                <p class="text-muted small mb-0">Arts et Métiers, France (2024 - 2026)<br><em>Spécialisation : Tech 3D Interactives & VR/AR</em></p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="timeline-icon bg-secondary bg-opacity-25 text-light me-3 flex-shrink-0">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Licence en Informatique</h6>
+                                <p class="text-muted small mb-0">Université de Lorraine, France (2021 - 2024)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container py-5 mt-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold d-inline-block border-bottom border-3 border-primary pb-2">Compétences Techniques</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark border-secondary shadow-sm rounded-4 text-center p-4">
+                    <i class="bi bi-code-square fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-white">Développement</h5>
+                    <p class="text-light small mt-2">Unity, Unreal Engine, SFML-SDL2, Android Studio, C#, C++</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark border-secondary shadow-sm rounded-4 text-center p-4">
+                    <i class="bi bi-boxes fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-white">3D & Multimédia</h5>
+                    <p class="text-light small mt-2">3ds Max, Blender, Premiere Pro, Photoshop</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark border-secondary shadow-sm rounded-4 text-center p-4">
+                    <i class="bi bi-cpu fs-1 text-primary mb-3"></i>
+                    <h5 class="fw-bold text-white">Data & Vision par ordinateur</h5>
+                    <p class="text-light small mt-2">OpenCV, MediaPipe, YOLO, Pandas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container py-5 mt-4">
         <div class="text-center mb-5">
             <h2 class="fw-bold d-inline-block border-bottom border-3 border-primary pb-2">
-                Mes Réalisations
+                Mes Projets
             </h2>
         </div>
 
-        <h3 class="mb-4 text-white fw-bold"><i class="bi bi-hammer me-2 text-primary"></i>Industrielles</h3>
+        <h3 class="mb-4 text-white fw-bold"><i class="bi bi-hammer me-2 text-primary"></i>Industrie</h3>
         <div class="row g-4 mb-5 justify-content-center">
             <div class="col-md-4">
                 <div class="card h-100 shadow-lg rounded-4 border-0 bg-dark text-white">
@@ -74,13 +158,13 @@
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">JANVIER 2026</p>
                         <h5 class="card-title">TerrariskVR</h5>
-                        <p class="card-text text-muted small">Sensibilisation au risque d'éboulement pour GRDF.</p>
+                        <p class="card-text text-light small">Sensibilisation au risque de chutes de pierres pour GRDF.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
                             <span class="badge text-bg-secondary">VR</span>
                             <span class="badge text-bg-secondary">Formation</span>
                         </div>
-                        <a href="TerrariskVR.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="TerrariskVR.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
@@ -90,15 +174,14 @@
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">JANVIER 2025</p>
                         <h5 class="card-title">VR'Tech</h5>
-                        <p class="card-text text-muted small">Découverte d'une ligne de production verrière.</p>
+                        <p class="card-text text-light small">Découverte d'une ligne de production verrière.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
                             <span class="badge text-bg-secondary">3dsMax</span>
                             <span class="badge text-bg-secondary">VR</span>
                             <span class="badge text-bg-secondary">Formation</span>
-
                         </div>
-                        <a href="Vrtech.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="Vrtech.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
@@ -109,38 +192,34 @@
             
             <div class="col-md-4">
                 <div class="card h-100 shadow-lg rounded-4 border-0 bg-dark text-white">
-                    <img src="img/GuitAR_Screenshot.png" class="card-img-top" alt="Projet Guitare">
+                    <img src="img/GuitAR_Screenshot.png" class="card-img-top" alt="Projet Guit'AR">
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">NOVEMBRE 2025</p>
                         <h5 class="card-title">Guit'AR</h5>
-                        <p class="card-text text-muted small">Aide à la visualisation des gammes à la guitare.</p>
+                        <p class="card-text text-light small">Aide visuelle pour l'apprentissage des gammes à la guitare.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
-                            <span class="badge text-bg-secondary">VR</span>
-                            <span class="badge text-bg-secondary">Formation</span>
-
+                            <span class="badge text-bg-secondary">AR</span>
+                            <span class="badge text-bg-secondary">Hand Tracking</span>
                         </div>
-                        <a href="GuitAR.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="GuitAR.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card h-100 shadow-lg rounded-4 border-0 bg-dark text-white">
-                    <img src="img/EscapeGameMath_Screenshot.png" class="card-img-top" alt="Projet Maths">
+                    <img src="img/EscapeGameMath_Screenshot.png" class="card-img-top" alt="Projet Math">
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">JUILLET 2025</p>
-                        <h5 class="card-title">Escape Game Maths</h5>
-                        <p class="card-text text-muted small">Application VR pour l'enseignement des mathématiques.</p>
+                        <h5 class="card-title">Math Escape Game</h5>
+                        <p class="card-text text-light small">Application VR pour l'enseignement des mathématiques.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
-                            <span class="badge text-bg-secondary">Blender</span>
-
+                            <span class="badge text-bg-secondary">WebXR</span>
                             <span class="badge text-bg-secondary">Serious Game</span>
-                            <span class="badge text-bg-secondary">Stage</span>
-
                         </div>
-                        <a href="Math.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="Math.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
@@ -150,17 +229,15 @@
                     <img src="img/PVD_Screenshot.png" class="card-img-top" alt="Projet PVD">
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">MARS 2025</p>
-                        <h5 class="card-title">Procédé PVD VR</h5>
-                        <p class="card-text text-muted small">Simulation de dépôt physique en phase vapeur.</p>
+                        <h5 class="card-title">PVD VR Process</h5>
+                        <p class="card-text text-light small">Simulation de dépôt physique en phase vapeur.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
                             <span class="badge text-bg-secondary">3dsMax</span>
                             <span class="badge text-bg-secondary">VR</span>
                             <span class="badge text-bg-secondary">Recherche</span>
-                            <span class="badge text-bg-secondary">Formation</span>
-
                         </div>
-                        <a href="Pvd.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="pvd.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
@@ -170,21 +247,17 @@
                     <img src="img/Drone_Screenshot.png" class="card-img-top" alt="Projet Drone">
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">NOVEMBRE 2024</p>
-                        <h5 class="card-title">Simulateur de pilotage</h5>
-                        <p class="card-text text-muted small">Apprentissage du pilotage de drone en environnement virtuel.</p>
+                        <h5 class="card-title">Simulateur de Drone</h5>
+                        <p class="card-text text-light small">Apprentissage du pilotage de drone dans un environnement virtuel.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
                             <span class="badge text-bg-secondary">Recherche</span>
                             <span class="badge text-bg-secondary">Formation</span>
-
                         </div>
-                        <a href="Drone.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="Drone.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
         <h3 class="mb-4 text-white fw-bold"><i class="bi bi-camera-reels me-2 text-primary"></i>Modélisation & Rendu</h3>
@@ -195,13 +268,13 @@
                     <img src="img/MaisonUnreal_Screenshot.png" class="card-img-top" alt="Projet Maison">
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">DÉCEMBRE 2025</p>
-                        <h5 class="card-title">Maison style colonial</h5>
-                        <p class="card-text text-muted small">Modélisation 3D d'une maison style colonial et rendu 3D sur Unreal Engine.</p>
+                        <h5 class="card-title">Maison de Style Colonial</h5>
+                        <p class="card-text text-light small">Modélisation 3D d'une maison coloniale et rendu sur Unreal Engine.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unreal</span>
                             <span class="badge text-bg-secondary">3dsMax</span>
                         </div>
-                        <a href="MaisonUnreal.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="MaisonUnreal.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
@@ -211,13 +284,13 @@
                     <img src="img/TramDijon_Screenshot.png" class="card-img-top" alt="Projet Tram">
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">DÉCEMBRE 2024</p>
-                        <h5 class="card-title">Tram de Dijon</h5>
-                        <p class="card-text text-muted small">Modélisation du Tram de Dijon et son arret.</p>
+                        <h5 class="card-title">Tramway de Dijon</h5>
+                        <p class="card-text text-light small">Modélisation du tramway de Dijon et de sa station.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
                             <span class="badge text-bg-secondary">3dsMax</span>
                         </div>
-                        <a href="TramDijon.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="TramDijon.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
@@ -231,63 +304,58 @@
                     <img src="img/MotionSickness_Screenshot.png" class="card-img-top" alt="Projet CyberSickness">
                     <div class="card-body">
                         <p class="text-primary fw-bold small mb-1">JANVIER 2026</p>
-                        <h5 class="card-title">Étude sur la CyberSickness</h5>
-                        <p class="card-text text-muted small">Étude expérimentale sur la CyberSickness dans les environnements VR. Exploration des moyens pour la réduire (Dynamic FOV; Blur; etc.).</p>
+                        <h5 class="card-title">Étude Cybersickness</h5>
+                        <p class="card-text text-light small">Étude expérimentale sur la Cybersickness en environnement VR. Exploration de solutions d'atténuation (FOV, Flou, etc.).</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
                             <span class="badge text-bg-secondary">Recherche</span>
                             <span class="badge text-bg-secondary">Cybersickness</span>
                         </div>
-                        <a href="Cybersickness.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="cybersickness.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card h-100 shadow-lg rounded-4 border-0 bg-dark text-white">
-                    <img src="img/Hackaton.png" class="card-img-top" alt="Projet Tank">
+                    <img src="img/Hackaton.png" class="card-img-top" alt="Projet Hackathon">
                     <div class="card-body">
-                        <p class="text-primary fw-bold small mb-1">Octobre 2025</p>
-                        <h5 class="card-title">Hackaton Franco-Allemand</h5>
-                        <p class="card-text text-muted small">Développement d'une application VR pour la sensibilisation aux problèmes visuelle.</p>
+                        <p class="text-primary fw-bold small mb-1">OCTOBRE 2025</p>
+                        <h5 class="card-title">Hackathon Franco-Allemand</h5>
+                        <p class="card-text text-light small">Développement d'une application VR pour la sensibilisation aux handicaps visuels.</p>
                         <div class="mb-3">
                             <span class="badge text-bg-secondary">Unity</span>
                             <span class="badge text-bg-secondary">3dsMax</span>
-                            <span class="badge text-bg-secondary">Internationale</span>
-
-                            <span class="badge text-bg-secondary">Sensibilisation</span>
+                            <span class="badge text-bg-secondary">Accessibilité</span>
                         </div>
-                        <a href="Hackaton.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
+                        <a href="hackathon.html" class="btn btn-sm btn-outline-primary stretched-link">Détails</a>
                     </div>
                 </div>
             </div>
 
+        </div>
+    </section>
 
-            <div class="col-md-4">
-                <div class="card h-100 shadow-lg rounded-4 border-0 bg-dark text-white">
-                    <img src="img/Tank_Screenshot.png" class="card-img-top" alt="Projet Tank">
-                    <div class="card-body">
-                        <p class="text-primary fw-bold small mb-1">DÉCEMBRE 2024</p>
-                        <h5 class="card-title">Jeux de tank</h5>
-                        <p class="card-text text-muted small">Développement d'un jeu de tank afin d'apprendre les bases de Unity.</p>
-                        <div class="mb-3">
-                            <span class="badge text-bg-secondary">Unity</span>
-                            <span class="badge text-bg-secondary">3dsMax</span>
-
-                            <span class="badge text-bg-secondary">Jeux Vidéo</span>
-                        </div>
-                        <a href="Tank.html" class="btn btn-sm btn-outline-primary stretched-link">Detail</a>
-                    </div>
-                </div>
+    <section id="contact" class="container py-5 mt-5 border-top border-secondary">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold d-inline-block border-bottom border-3 border-primary pb-2">Me Contacter</h2>
+            <p class="text-light mt-3 fs-5">Actuellement basé à Guangzhou, Chine.<br>Une opportunité, un projet ou une question ? N'hésitez pas à me contacter !</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center d-flex justify-content-center gap-3 flex-wrap">
+                <a href="mailto:leo.mans52@gmail.com" class="btn btn-outline-light btn-lg px-4 py-3 shadow-sm hover-scale" style="border-radius: 12px;">
+                    <i class="bi bi-envelope-fill fs-3 d-block mb-2 text-primary"></i> leo.mans52@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/l%C3%A9o-mans-9416b229b/" target="_blank" class="btn btn-outline-light btn-lg px-4 py-3 shadow-sm hover-scale" style="border-radius: 12px;">
+                    <i class="bi bi-linkedin fs-3 d-block mb-2 text-primary"></i> LinkedIn
+                </a>
             </div>
-
-
         </div>
     </section>
 
     <footer class="bg-body-tertiary text-center py-4 mt-5">
         <div class="container">
-            <p class="mb-0">© 2026 Mans Léo - Fait avec Bootstrap 5</p>
+            <p class="mb-0 text-secondary">© 2026 Léo Mans - Portfolio XR & Recherche</p>
         </div>
     </footer>
 

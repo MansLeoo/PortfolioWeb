@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colonial House | Mans Léo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .ratio-16x9 {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="Indexen.html">Mans Léo Portfolio</a>
+        <div class="ms-auto d-flex align-items-center gap-3">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-translate me-1"></i> EN
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="MaisonUnreal.html">🇫🇷 Français</a></li>
+                    <li><a class="dropdown-item active" href="#">🇬🇧 English</a></li>
+                </ul>
+            </div>
+            <a href="Indexen.html" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-arrow-left"></i> Back
+            </a>
+        </div>
+    </div>
+</nav>
+
+<section class="container py-5 mt-4">
+    <div class="row align-items-center justify-content-center text-center">
+        <div class="col-lg-10">
+            <div class="mb-3">
+                <span class="badge bg-primary">Student Project</span>
+                <span class="badge border border-primary text-primary">3ds Max</span>
+                <span class="badge border border-primary text-primary">Unreal Engine 5</span>
+                <span class="badge border border-primary text-primary">Environment Art</span>
+            </div>
+            <h1 class="display-4 fw-bold text-white">Colonial Style House</h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                Creation of a photorealistic environment, modeled from scratch and rendered in real-time.
+                Project completed as part of a 3D modeling course focusing on Environment Art creation.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="ratio ratio-16x9">
+                <img src="MaisonUnreal/img/Maison1.jpg" alt="Daytime render of the colonial house" class="img-fluid object-fit-cover w-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+            <!-- 1. CONTEXTE ET OBJECTIFS -->
+            <h3 class="text-white fw-bold mb-4"><i class="bi bi-bullseye text-primary me-2"></i>Context and Objectives</h3>
+
+            <div class="mb-4">
+                <p class="text-light">
+                    This project was completed as part of an educational module focused on 3D modeling and real-time rendering integration using <strong>Unreal Engine 5</strong>.
+                </p>
+                <p class="text-light">
+                    The main objective was to start from a single reference image of a colonial-style house and fully model it using <strong>3ds Max</strong>. The second phase of the project involved importing this model into Unreal Engine, designing the materials (shaders), and using various assets to compose the surrounding environment, presenting the house in a photorealistic setting.
+                </p>
+
+                <figure class="text-center mt-4 m-0">
+                    <img src="MaisonUnreal/img/MaisonBase.jpg" alt="Reference image of the colonial house" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 450px; width: auto; object-fit: contain;">
+                    <figcaption class="text-secondary small mt-2">Base image to reproduce</figcaption>
+                </figure>
+            </div>
+
+            <hr class="my-5 border-secondary">
+
+            <!-- 2. DÉFIS TECHNIQUES -->
+            <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Technical Challenges</h3>
+
+            <div class="mb-5">
+                <h5 class="fw-bold text-light">1. Modular 3D Modeling in 3ds Max</h5>
+                <div class="row align-items-center mt-3">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            The challenge was to create a detailed and perfectly optimized model for a game engine. This involved strategically breaking down the house into various repeatable elements (modular approach), rigorously setting up pivot points, and carefully unwrapping UVs to prepare for texturing without any loss of quality.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="MaisonUnreal/img/Maison5.jpg" alt="Modular modeling in 3ds Max" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                            <figcaption class="text-secondary small mt-2">Modeling of the different elements in 3ds Max</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5 class="fw-bold text-light">2. Rendering and Integration in Unreal Engine 5</h5>
+                <p class="text-light">
+                    Integration into UE5 required significant work on the overall visual atmosphere of the scene. It was necessary to set up a coherent lighting system using Lumen technology, create photorealistic materials, and intelligently arrange the exterior decorative elements (vegetation, terrain, props) to achieve an immersive, believable, and well-proportioned final composition.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5 mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                    <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Project Fact Sheet</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <div class="col-sm-6 col-md-3">
+                            <strong class="d-block text-secondary text-uppercase small mb-1">Role</strong>
+                            <span class="text-light">3D Artist <br> Environment Artist</span>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <strong class="d-block text-secondary text-uppercase small mb-1">Context</strong>
+                            <span class="text-light">Academic Project<br>(Individual)</span>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <strong class="d-block text-secondary text-uppercase small mb-2">Technologies & Skills</strong>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark border border-secondary">Unreal Engine 5</span>
+                                <span class="badge bg-dark border border-secondary">3ds Max</span>
+                                <span class="badge bg-dark border border-secondary">Modular Modeling</span>
+                                <span class="badge bg-dark border border-secondary">UV Unwrapping</span>
+                                <span class="badge bg-dark border border-secondary">Lighting (Lumen)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5 border-top border-secondary mt-3">
+    <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Project Gallery</h3>
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="row g-3">
+                <div class="col-md-4 col-sm-6">
+                    <img src="MaisonUnreal/img/Maison1.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Main Exterior View" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="MaisonUnreal/img/Maison2.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Side Night View" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="MaisonUnreal/img/Maison3.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Side View" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img src="MaisonUnreal/img/Maison4.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Exterior View" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-body-tertiary text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">© 2026 Mans Léo Portfolio</p>
+        <a href="Indexen.html" class="small text-decoration-none">Back to Home</a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Modal (lightbox) -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0 text-center position-relative">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Enlarged view">
+                <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const lightboxModal = document.getElementById('lightboxModal');
+        if (lightboxModal) {
+            lightboxModal.addEventListener('show.bs.modal', function (event) {
+                const imageClicked = event.relatedTarget;
+                if (imageClicked) {
+                    const src = imageClicked.getAttribute('src');
+                    const altText = imageClicked.getAttribute('alt');
+                    const modalImage = document.getElementById('modalImage');
+                    const modalCaption = document.getElementById('modalCaption');
+                    if (modalImage) modalImage.setAttribute('src', src);
+                    if (modalCaption) {
+                        if (altText) {
+                            modalCaption.textContent = altText;
+                            modalCaption.classList.remove('d-none');
+                        } else {
+                            modalCaption.classList.add('d-none');
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

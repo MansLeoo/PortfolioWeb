@@ -16,12 +16,6 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
         
-        .tech-card {
-            background-color: #212529;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-        }
-
         .gallery-img {
             transition: transform 0.3s ease;
         }
@@ -29,13 +23,19 @@
             transform: scale(1.02);
             filter: brightness(1.1);
         }
+        
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
+            <a class="navbar-brand fw-bold" href="index.html">Portfolio de Mans Léo</a>
             
             <div class="ms-auto d-flex align-items-center gap-3">
                 <div class="dropdown">
@@ -44,7 +44,7 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
-                        <li><a class="dropdown-item" href="hackathon-en.html">🇬🇧 English</a></li>
+                        <li><a class="dropdown-item" href="Hackathonen.html">🇬🇧 English</a></li>
                     </ul>
                 </div>
 
@@ -56,8 +56,8 @@
     </nav>
 
     <section class="container py-5 mt-4">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
                 <div class="mb-3">
                     <span class="badge bg-primary">Hackathon</span>
                     <span class="badge border border-primary text-primary">Unity</span>
@@ -65,124 +65,181 @@
                     <span class="badge border border-primary text-primary">Accessibilité</span>
                 </div>
                 <h1 class="display-4 fw-bold text-white">Hackathon Franco-Allemand</h1>
-                <p class="lead text-secondary">
+                <p class="lead text-secondary mx-auto" style="max-width: 800px;">
                     Application de sensibilisation aux différentes déficiences visuelles (daltonisme, astigmatisme). 
-                    Projet réalisé en 48h pour promouvoir l'accessibilité numérique.
+                    Projet réalisé en 3 jours en collaboration internationale pour promouvoir l'accessibilité numérique.
                 </p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="#" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
-                </div>
+
             </div>
         </div>
     </section>
 
     <section class="container mb-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="ratio ratio-16x9">
                     <iframe src="https://www.youtube.com/embed/SGnKBciM-QI" title="DisabilitiesVR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="container py-4">
-        <div class="row g-5">
-            
-            <div class="col-lg-8">
-                <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
-                <p>
-                    Dans le cadre du Hackathon Franco-Allemand, notre équipe avait pour mission de créer une expérience immersive sensibilisant au handicap visuel.
-                </p>
-                <p>
-                    J'ai été spécifiquement en charge du développement de la simulation de l'<strong>astigmatisme</strong>. L'objectif était de reproduire fidèlement, en réalité virtuelle, les troubles de la vision (flou, éblouissement, distorsion lumineuse) ressentis par les personnes astigmates, afin de permettre aux utilisateurs valides de "vivre" ce handicap.
-                </p>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-bullseye text-primary me-2"></i>Contexte et objectifs</h3>
+                <div class="mb-4">
+                    <p class="text-light">
+                        Ce projet a été réalisé dans le cadre d'un <strong>hackathon franco-allemand intensif de 3 jours</strong>, réunissant les étudiants des <strong>Arts et Métiers</strong> et de l'université allemande <strong>HAW Hamburg</strong>. L'objectif principal de cet événement était de concevoir et de présenter une application en réalité virtuelle ayant pour but de sensibiliser le grand public aux différentes situations de handicap.
+                    </p>
+                    <p class="text-light">
+                        Répartis en <strong>groupes de 4 étudiants</strong>, nous avons fait le choix de cibler notre expérience sur les <strong>handicaps visuels</strong> (daltonisme et astigmatisme).
+                    </p>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>L'expérience réalisée : Un musée interactif</h3>
+                
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            Pour proposer une approche à la fois ludique et pédagogique, nous avons pris le parti de concevoir l'application sous la forme d'un <strong>musée virtuel</strong>.
+                        </p>
+                        <p class="text-light">
+                            La visite commence par une galerie d'exposition présentant des œuvres créées par des artistes atteints de <strong>daltonisme</strong>. Par le biais d'une interface interactive en VR, l'utilisateur a la possibilité de sélectionner la forme précise de daltonisme qu'il souhaite simuler. L'environnement visuel s'adapte alors en temps réel, permettant à l'utilisateur de comprendre la perception modifiée des couleurs de ces artistes.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Hackaton/img/tableau2.png" alt="Différents tableaux" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                            <figcaption class="text-secondary small mt-2">Différents tableaux avec différentes teintes de couleurs</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-4 flex-md-row-reverse">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            Le parcours se poursuit ensuite dans <strong>une salle entièrement dédiée à l'astigmatisme</strong>. Ce trouble se caractérisant notamment par une déformation directionnelle des sources lumineuses, nous avons conçu un environnement sombre mettant en évidence ces effets.
+                        </p>
+                        <p class="text-light">
+                            La salle intègre divers éléments très visuels : <strong>des feux de circulation urbains, une voiture avec les phares allumés, ainsi que des enseignes lumineuses en néon</strong>. En activant la simulation, l'utilisateur subit l'étirement des lumières, l'effet de "halo" et l'éblouissement, reproduisant de manière frappante la difficulté visuelle d'une personne astigmate, particulièrement la nuit.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Hackaton/img/Astigmat.png" alt="Simulation Astigmatisme" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                            <figcaption class="text-secondary small mt-2">Rendu visuel de la simulation d'astigmatisme</figcaption>
+                        </figure>
+                    </div>
+                </div>
 
                 <hr class="my-5 border-secondary">
                 
-                <h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-person-workspace text-primary me-2"></i>Mon rôle dans le projet</h3>
+                <div class="card bg-transparent border border-secondary mb-5">
+                    <div class="card-body">
+                        <p class="text-light mb-3">
+                            Au sein de l'équipe, j'ai été spécifiquement en charge du <strong>développement de la simulation de l'astigmatisme</strong>, afin de reproduire fidèlement les troubles de la vision (flou, éblouissement, distorsion lumineuse) ressentis au quotidien.
+                        </p>
+                        <ul class="text-light mb-0">
+                            <li class="mb-2"><strong>Level Design :</strong> Création de la salle sombre et agencement des sources lumineuses stratégiques (néons, phares, feux tricolores).</li>
+                            <li class="mb-2"><strong>Programmation visuelle :</strong> Implémentation des effets de déformation optique et de halo autour des lumières.</li>
+                            <li class="mb-0"><strong>Expérience Utilisateur :</strong> Programmation des interactions permettant d'activer la simulation dans l'environnement VR.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Défis techniques</h3>
 
                 <div class="mb-4">
                     <h5 class="fw-bold text-light">1. Rendu visuel fidèle par Post-Processing</h5>
-                    <p>
+                    <p class="text-light">
                         Le défi majeur était de simuler l'astigmatisme de manière réaliste et optimisée dans Unity. J'ai choisi de ne pas utiliser de shaders lourds, mais d'exploiter la pile de <strong>Post-Processing</strong> d'Unity combinée à l'ajout ciblé de <strong>Lens Flares</strong>. Cette approche a permis de reproduire fidèlement l'étirement caractéristique des sources lumineuses perçu par un œil astigmate.
                     </p>
                 </div>
 
                 <div class="mb-4">
                     <h5 class="fw-bold text-light">2. Performance en VR (Meta Quest 3)</h5>
-                    <p>
-                        L'application devait tourner sur un casque autonome. L'utilisation intelligente du Post-Processing natif plutôt que de solutions custom a permis de maintenir un taux de rafraîchissement élevé (72/90 FPS), évitant ainsi le mal des transports tout en garantissant un rendu visuel convaincant.
+                    <p class="text-light">
+                        L'application devait tourner de manière fluide sur un casque autonome. L'utilisation intelligente du Post-Processing natif plutôt que de solutions sur mesure a permis de maintenir un taux de rafraîchissement élevé (72/90 FPS), évitant ainsi le mal des transports tout en garantissant un rendu visuel convaincant.
                     </p>
                 </div>
 
                 <div class="mb-4">
                     <h5 class="fw-bold text-light">3. Travail en équipe internationale</h5>
-                    <p>
-                        Collaboration intensive sur 2 jours avec une équipe de 4 développeurs francophones et germanophones. Gestion du versioning avec Git et coordination rapide pour intégrer les différents modules (daltonisme, myopie, astigmatisme) dans une seule expérience VR cohérente.
+                    <p class="text-light">
+                        Une collaboration intensive sur 3 jours avec une équipe de 4 développeurs francophones et germanophones. Cela a impliqué une gestion rigoureuse du versioning avec Git et une coordination rapide pour intégrer les différents modules (daltonisme, myopie, astigmatisme) dans une seule expérience VR cohérente.
                     </p>
                 </div>
+
             </div>
-
-            <div class="col-lg-4">
-                <div class="tech-card p-4 sticky-top" style="top: 100px;">
-                    <h4 class="fw-bold mb-4">Fiche Technique</h4>
-                    
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
-                            <span>Développeur Unity (VFX & Gameplay)</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Durée</strong>
-                            <span>2 jours (Octobre 2024)</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
-                            <span>4 Développeurs</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
-                            <div class="mt-2 d-flex flex-wrap gap-2">
-                                <span class="badge bg-dark border border-secondary">C#</span>
-                                <span class="badge bg-dark border border-secondary">Unity 6</span>
-                                <span class="badge bg-dark border border-secondary">Post-Processing</span>
-                                <span class="badge bg-dark border border-secondary">Meta Quest 3</span>
-                                <span class="badge bg-dark border border-secondary">Git</span>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <hr class="border-secondary">
-                    
-                    <h5 class="fw-bold mb-3 small">Compétences clés</h5>
-                    <ul class="text-secondary small ps-3">
-                        <li>Maîtrise du Post-Processing Unity</li>
-                        <li>Intégration de Lens Flares / VFX</li>
-                        <li>Prototypage rapide (Hackathon)</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section class="container py-5">
-        <h3 class="text-white fw-bold mb-4"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
-        <div class="row g-3">
-            <div class="col-md-4 col-sm-6">
-                <img src="Hackaton/img/plan.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Plan de travail" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+    <section class="container mb-5 mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Fiche technique du projet</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Rôle</strong>
+                                <span class="text-light">Développeur Unity <br> (VFX & Gameplay)</span>
+                            </div>
+                            <div class="col-sm-6 col-md-2">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Durée</strong>
+                                <span class="text-light">3 jours <br> (Hackathon)</span>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Équipe</strong>
+                                <span class="text-light">4 Développeurs <br> (Arts et Métiers / HAW Hamburg)</span>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">Unity 6</span>
+                                    <span class="badge bg-dark border border-secondary">Meta Quest 3</span>
+                                    <span class="badge bg-dark border border-secondary">Post-Processing</span>
+                                    <span class="badge bg-dark border border-secondary">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="Hackaton/img/tableau.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Tableau de présentation" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="Hackaton/img/Astigmat.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Simulation Astigmatisme" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="Hackaton/img/tableau2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Brainstorming" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="Hackaton/img/PhotoGroupe.JPG" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Photo de groupe" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+        </div>
+    </section>
+
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Hackaton/img/plan.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Plan" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Hackaton/img/tableau.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Salle 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Hackaton/img/Astigmat.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Simulation Astigmatisme" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Hackaton/img/tableau2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Tableaux" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Hackaton/img/PhotoGroupe.JPG" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Photo de groupe" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

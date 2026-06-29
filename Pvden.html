@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PVD VR | Mans Léo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .ratio-16x9 {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="Indexen.html">Mans Léo Portfolio</a>
+            
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-translate me-1"></i> EN
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="pvd.html">🇫🇷 Français</a></li>
+                        <li><a class="dropdown-item active" href="#">🇬🇧 English</a></li>
+                    </ul>
+                </div>
+
+                <a href="Indexen.html" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-arrow-left"></i> Back
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5 mt-4">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
+                <div class="mb-3">
+                    <span class="badge border border-primary text-primary">Unity</span>
+                    <span class="badge border border-primary text-primary">VR</span>
+                    <span class="badge border border-primary text-primary">Research</span>
+                    <span class="badge border border-primary text-primary">Education</span>
+                </div>
+                <h1 class="display-4 fw-bold text-white">PVD VR</h1>
+                <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+                    Immersive application for visualizing the PVD (Physical Vapor Deposition) process. 
+                    Designed to facilitate the understanding of complex physical phenomena related to thin film deposition.
+                </p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="#" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> View code</a>
+                    <a href="#" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Read report</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+
+                <!-- CONCEPT CARDS -->
+                <div class="row justify-content-center mb-5 g-4">
+                    <div class="col-md-6">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="PVD/img/logo.svg" alt="FEMTO" class="img-fluid rounded me-3" style="height: 50px; background-color: white; padding: 2px;">
+                                    <h5 class="fw-bold text-white mb-0">FEMTO-ST Institute</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    A public research laboratory based in Besançon, France. Specialized in engineering and applied physics, it conducts research on the design and study of materials related to thin film deposition.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-white rounded d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                        <i class="bi bi-layers-fill text-primary fs-3"></i>
+                                    </div>
+                                    <h5 class="fw-bold text-white mb-0">The PVD Process</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    A vacuum coating technique. It consists of generating an ionized gas (the <strong>plasma</strong>) to sputter a source material (the <strong>target</strong>). The extracted atoms then deposit as a thin protective layer on an object.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CONTEXT -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-bullseye text-primary me-2"></i>Context and objectives</h3>
+                <div class="mb-4">
+                    <p class="text-light">
+                        This one-month project was carried out in collaboration between my school and the FEMTO-ST institute in Besançon. The main objective of this approach is to popularize and explain the complex Physical Vapor Deposition (PVD) process to a very wide audience, ranging from the general public to students and researchers.
+                    </p>
+                    <p class="text-light">
+                        To meet this need for accessibility, the idea of developing an immersive Virtual Reality application was born. Initiated in 2019, this long-term project has evolved year after year thanks to the successive contributions of different student groups. It is in this context of technical continuity that I joined the development team to bring new improvements.
+                    </p>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>The developed application</h3>
+                
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            The experience takes place in two main phases. First, the user is immersed in an interactive laboratory room.
+                        </p>
+                        <p class="text-light">
+                            Facing a 3D replica of the PVD machine, they can interact directly with the equipment to faithfully and independently reproduce all the preparation steps of the deposition process.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Pvd/img/Salle.png" alt="Laboratory Environment" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                            <figcaption class="text-secondary small mt-2">The virtual laboratory and the PVD machine</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-4 flex-md-row-reverse">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            In a second step, the simulation performs a radical scale change: the user finds themselves immersed <strong>inside the machine itself, at the atomic scale</strong>.
+                        </p>
+                        <p class="text-light">
+                            From this unique microscopic environment, they can manually trigger the various steps of the process. This allows them to observe in real-time usually invisible phenomena, such as plasma formation, ion-matter interactions, and atomic dynamics.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Pvd/img/InterieurMachine.png" alt="Inside the machine at the atomic scale" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                            <figcaption class="text-secondary small mt-2">Diving into the vacuum chamber at the atomic scale</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-person-workspace text-primary me-2"></i>My role in the project</h3>
+                <div class="card bg-transparent border border-secondary mb-5">
+                    <div class="card-body">
+                        <p class="text-light mb-3">
+                            Taking over the project along the way, my main mission was to enrich the simulation, make it more reliable, and improve its overall ergonomics:
+                        </p>
+                        <ul class="text-light mb-0">
+                            <li class="mb-2"><strong>UI/UX Redesign:</strong> Complete modernization and reorganization of the graphical user interface for better VR navigation.</li>
+                            <li class="mb-2"><strong>Bug Fixing:</strong> Audit and resolution of critical issues impacting the stability of the simulation.</li>
+                            <li class="mb-0"><strong>Visual Programming:</strong> Implementation of the real-time mesh deformation system (target erosion) and creation of VFX for the plasma.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+                
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Technical challenges</h3>
+
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">1. Understanding a complex physical process</h5>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-md-7 mb-3 mb-md-0">
+                            <p class="text-light">
+                                The first challenge was to assimilate the theoretical functioning of PVD in order to translate these complex physical phenomena into computer algorithms and relevant visuals in the Unity engine.
+                            </p>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <figure class="m-0">
+                                <img src="Pvd/img/cours.jpg" alt="Explanatory diagram of PVD" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                                <figcaption class="text-secondary small mt-2">Explanatory diagram of PVD</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">2. From 3D scan to optimized Mesh</h5>
+                    <div class="row align-items-center mt-3 flex-md-row-reverse">
+                        <div class="col-md-7 mb-3 mb-md-0">
+                            <p class="text-light">
+                                To simulate target wear, I started with a raw point cloud from a 3D scan. I had to process this heavy data (cleaning, remeshing via MeshLab and 3ds Max) to obtain an optimized 3D model capable of being dynamically deformed in the simulation.
+                            </p>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <figure class="m-0">
+                                <img src="Pvd/img/Optimisation.png" alt="3D mesh optimization" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                                <figcaption class="text-secondary small mt-2">Mesh processing and optimization</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">3. Plasma Modeling</h5>
+                    <p class="text-light">
+                        The visual integration of the plasma had to perfectly match physical reality. Based on a reference photo and the 3D point cloud of the wear, I programmed the shape of the plasma to exactly fit the erosion zone of the target, ensuring the consistency of the scene.
+                    </p>
+                    <div class="row justify-content-center align-items-center g-4 mt-3">
+                        <div class="col-md-6 text-center d-flex flex-column justify-content-between h-100">
+                            <figure class="m-0">
+                                <img src="Pvd/img/ScanUsure.png" alt="Target wear diagram" class="img-fluid inline-img rounded mx-auto" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 350px; width: auto;">
+                                <figcaption class="text-secondary small mt-3">Representative diagram of the target wear and consequently of the plasma shape</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 text-center d-flex flex-column justify-content-between h-100">
+                            <figure class="m-0">
+                                <img src="Pvd/img/PlasmaShape.png" alt="Plasma shape definition" class="img-fluid inline-img rounded mx-auto" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 350px; width: auto;">
+                                <figcaption class="text-secondary small mt-3">Definition of the plasma shape</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5 mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Project Technical Sheet</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-4">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Role</strong>
+                                <span class="text-light">Unity Developer<br>UX / VFX</span>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Duration</strong>
+                                <span class="text-light">1 month</span>
+                            </div>
+                            <div class="col-sm-12 col-md-5">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">Unity 6</span>
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">OpenXR</span>
+                                    <span class="badge bg-dark border border-secondary">Meta Quest 3</span>
+                                    <span class="badge bg-dark border border-secondary">MeshLab / 3ds Max</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Project Gallery</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Pvd/img/cours.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Educational material" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Pvd/img/Menu.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Main Interface" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Pvd/img/Salle.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Laboratory Environment" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Pvd/img/Machine.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="PVD Machine" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Pvd/img/InterieurMachine.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Interior view of the chamber" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Pvd/img/Plasma.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Plasma Simulation" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-body-tertiary text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2026 Mans Léo Portfolio</p>
+            <a href="Indexen.html" class="small text-decoration-none">Back to home</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Enlarged view">
+                    <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const lightboxModal = document.getElementById('lightboxModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+
+        lightboxModal.addEventListener('show.bs.modal', function (event) {
+            const imageClicked = event.relatedTarget;
+            const src = imageClicked.getAttribute('src');
+            const altText = imageClicked.getAttribute('alt');
+            
+            modalImage.setAttribute('src', src);
+            if(altText) {
+                modalCaption.textContent = altText;
+                modalCaption.classList.remove('d-none');
+            } else {
+                modalCaption.classList.add('d-none');
+            }
+        });
+    </script>
+
+</body>
+</html>

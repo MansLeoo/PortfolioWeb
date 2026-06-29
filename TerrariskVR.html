@@ -22,7 +22,7 @@
             border-radius: 12px;
         }
 
-        /* Petit effet au survol des images de la galerie */
+        /* Effet au survol des images de la galerie */
         .gallery-img {
             transition: transform 0.3s ease;
         }
@@ -30,23 +30,29 @@
             transform: scale(1.02);
             filter: brightness(1.1);
         }
+        
+        /* Style pour les images intégrées dans le texte */
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
+        <a class="navbar-brand fw-bold" href="index.html">Portfolio de Mans Léo</a>
         
         <div class="ms-auto d-flex align-items-center gap-3">
-            
             <div class="dropdown">
                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-translate me-1"></i> FR
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
-                    <li><a class="dropdown-item" href="vertech-en.html">🇬🇧 English</a></li>
+                    <li><a class="dropdown-item" href="TerrariskVRen.html">🇬🇧 English</a></li>
                 </ul>
             </div>
 
@@ -57,163 +63,300 @@
     </div>
 </nav>
 
+    <!-- En-tête -->
     <section class="container py-5 mt-4">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
                 <div class="mb-3">
                     <span class="badge bg-primary">Défi Chal'enge</span>
                     <span class="badge border border-primary text-primary">Unity</span>
                     <span class="badge border border-primary text-primary">VR</span>
-                    <span class="badge border border-primary text-primary">Formation</span>
+                    <span class="badge border border-primary text-primary">Formation / Sécurité</span>
                 </div>
                 <h1 class="display-4 fw-bold text-white">TerrariskVR</h1>
-                <p class="lead text-secondary">
-                    Application de sensibilisation aux risques d'éboulements pour GRDF. 
-                    Simulation physique temps réel et pédagogie immersive.
+                <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                    Application de sensibilisation aux risques d'éboulement pour GRDF.
                 </p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="https://github.com/MansLeoo/TerrariskVR" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
-                    <a href="TerrariskVR/TerrariskVR_pres.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="https://github.com/MansLeoo/TerrariskVR" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
+                    <a href="TerrariskVR/TerrariskVR_pres.pdf" target="_blank" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le diaporama</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Vidéo -->
     <section class="container mb-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contenu principal -->
     <section class="container py-4">
-        <div class="row g-5">
-            
-            <div class="col-lg-8">
-                <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
-                <p>
-                    Dans le cadre du Défi Chal'enge, j'ai piloté une équipe pluridisciplinaire pour répondre à une problématique de GRDF : le manque d'impact des formations sécurité traditionnelles (PowerPoint, maquettes).
-
-Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle immersive. Plongé dans un chantier de rue pavillonnaire, l'apprenant a la liberté de descendre dans une tranchée non sécurisée pour vivre un ensevelissement de l'intérieur, accident déclenché par les vibrations d'un camion à proximité.
-                </p>
-
-
-<hr class="my-5 border-secondary">
- 
-<h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">1. Simulation Physique (Blender → Unity)</h5>
-    <p >Pour garantir un rendu visuel impressionnant sans impacter les performances temps réel, j'ai déporté le calcul physique de l'éboulement sur Blender. La simulation de destruction a été pré-calculée (baked), puis exportée sous forme d'animation optimisée vers Unity. Cette approche hybride offre un rendu exploitable tout en maintenant un framerate stable sur le casque VR.</p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">2. Optimisation Meta Quest 3 (Standalone)</h5>
-    <p >
-        L'application devait tourner de manière autonome (sans PC) sur le meta Quest 3.
-        J'ai dû faire en sorte que les modeles 3D soient optimisé, qu'il n'y est aps trop de lumiere et que l'animation d'énoulement ne sois pas trop lourde pour garantir une fluidité parfaite (72/90 FPS) malgré la complexité de la scène 3D.
-    </p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">3. Gestion d'équipe (5 personnes)</h5>
-    <p >
-        Au-delà du développement, j'ai assuré le lead technique et organisationnel d'une <strong>équipe de 5 personnes</strong> (graphistes et développeurs).
-        Mise en place du workflow Git, répartition des tâches et respect d'une deadline courte (2 semaines) dans le cadre du Défi Chal'enge.
-    </p>
-</div>
-</div>
-
-            <div class="col-lg-4">
-                <div class="tech-card p-4 sticky-top" style="top: 100px;">
-                    <h4 class="fw-bold mb-4">Fiche Technique</h4>
-                    
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
-                            <span>Chef de projet / Développeur / Graphiste 3D / Monteur Vidéo</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Durée</strong>
-                            <span>2 semaines (Jan 19 - Jan 30)</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
-                            <span>1 Développeur, 4 Graphistes 3D</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
-                            <div class="mt-2 d-flex flex-wrap gap-2">
-                                <span class="badge bg-dark border border-secondary">C#</span>
-                                <span class="badge bg-dark border border-secondary">Unity 6</span>
-                                <span class="badge bg-dark border border-secondary">OpenXR</span>
-                                <span class="badge bg-dark border border-secondary">Blender</span>
-                                <span class="badge bg-dark border border-secondary">3dsMax</span>
-                                <span class="badge bg-dark border border-secondary">MetaQuest3</span>
-                                <span class="badge bg-dark border border-secondary">Git</span>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <!-- 1. ACTEURS (Bulles Défi Chal'enge & GRDF) -->
+                <div class="row mb-4 g-4">
+                    <div class="col-md-6">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="TerrariskVR/img/ChalLogo.jpg" alt="Logo Défi Chal'enge" class="img-fluid rounded me-3" style="height: 50px; background-color: white; padding: 2px;">
+                                    <h5 class="fw-bold text-white mb-0">Le Défi Chal'enge</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    Un projet académique de 15 jours réunissant les étudiants des <strong>Arts et Métiers</strong>, du <strong>CNAM BFC (licence informatique)</strong> et de l’<strong>EGC Centre-Est (bachelor marketing)</strong>. L'objectif est d'associer différentes expertises techniques (VR, IA) et stratégiques pour concevoir des prototypes fonctionnels répondant aux besoins d'entreprises.
+                                </p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="TerrariskVR/img/GrdfLogo.jpg" alt="Logo GRDF" class="img-fluid rounded me-3" style="height: 50px; background-color: white; padding: 5px;">
+                                    <h5 class="fw-bold text-white mb-0">GRDF</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    Principal gestionnaire du réseau de distribution de gaz naturel en France. Ses activités impliquent de nombreuses interventions sur la voie publique, nécessitant la mise en place de formations continues pour garantir la sécurité des techniciens lors des travaux souterrains et en tranchée.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <hr class="border-secondary">
-                    
-                    <h5 class="fw-bold mb-3 small">Compétences clés</h5>
-                    <ul class="text-secondary small ps-3">
-                        <li>Simulation Physique sur Blender</li>
-                        <li>Optimisation sur Unity</li>
-                        <li>UX Design en VR</li>
+                <!-- 2. CONTEXTE ET OBJECTIFS -->
+                <h3 class="text-white fw-bold mb-4 mt-5"><i class="bi bi-bullseye text-primary me-2"></i>Contexte et objectifs</h3>
+                
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">Le cadre et le constat sur le terrain</h5>
+                    <p class="text-light">
+                        Réalisé dans le cadre du <strong>Défi Chal'enge</strong> (un projet intensif de 15 jours), notre équipe de 6 étudiants (deux Master 2, un Master 1, un L3, un L1 informatique et un bachelor marketing) a choisi la problématique soumise par GRDF. Tout au long du développement, nous avons échangé avec un <strong>chargé d'affaires senior</strong> de l'entreprise. GRDF place la prévention des risques professionnels au cœur de ses priorités. Actuellement, l'entreprise utilise des maquettes physiques pour simuler des accidents liés aux travaux de terrassement. Cependant, ces dispositifs restent statiques et l'interaction est limitée. Des accidents d'éboulement se produisent encore en raison d'une <strong>perception limitée des risques réels</strong> et d'un manque d'entraînement face à des situations soudaines.
+                    </p>
+                    <div class="text-center my-4">
+                        <figure class="figure">
+                            <img src="TerrariskVR/img/maquette.jpg" alt="Maquette physique GRDF" class="img-fluid inline-img figure-img" style="max-height: 350px;">
+                            <figcaption class="figure-caption text-light mt-2">Maquette physique statique utilisée par GRDF lors des formations.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">Notre mission et nos objectifs pédagogiques</h5>
+                    <p class="text-light">
+                        Pour pallier ce manque d'engagement, nous avons conçu une expérience en réalité virtuelle permettant de simuler des environnements dangereux sans mettre en péril les opérateurs. L'application vise spécifiquement à :
+                    </p>
+                    <ul class="text-light">
+                        <li class="mb-2"><strong>Sensibiliser</strong> les techniciens aux dangers liés aux éboulements dans les fouilles.</li>
+                        <li class="mb-2"><strong>Reconnaître</strong> les signes précurseurs indiquant un effondrement imminent.</li>
+                        <li class="mb-2"><strong>Expérimenter</strong> les conséquences d'une mauvaise décision dans un environnement sécurisé.</li>
+                        <li class="mb-2"><strong>Renforcer la mémorisation</strong> grâce à l'immersion et au retour immédiat.</li>
                     </ul>
                 </div>
-            </div>
+                
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">Les risques prioritaires ciblés</h5>
+                    <ul class="text-light mt-3">
+                        <li class="mb-3">
+                            <strong>Le risque d’ensevelissement :</strong> Un effondrement provoqué par l'instabilité des matériaux (profondeur de la tranchée, vibrations d'un camion à proximité, ruissellement).
+                        </li>
+                        <li class="mb-2">
+                            <strong>La chute de matériaux :</strong> Un danger lié à un boisage (soutènement) non conforme, comme l'utilisation de planches trop fines ou d'étais mal positionnés.
+                        </li>
+                    </ul>
+                </div>
 
+                <hr class="my-5 border-secondary">
+
+                <!-- 3. L'APPLICATION RÉALISÉE -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>L'application réalisée</h3>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                    <p class="text-light">
+                        Concrètement, TerrariskVR simule un chantier de rue pavillonnaire en cours de terrassement.
+                        Muni d'un casque Meta Quest 3, l'apprenant incarne un technicien libre de se déplacer
+                        dans l'environnement.
+                    </p>
+                    <p class="text-light">
+                        L'application propose <strong>deux scènes distinctes</strong> : l'une dans une
+                        <strong>tranchée sécurisée</strong> (correctement étayée et balisée), l'autre dans une
+                        <strong>tranchée non sécurisée</strong>. Dans chacune d'elles, un événement extérieur
+                        (comme le passage d'un camion) déclenche des vibrations et provoque un éboulement.
+                        En expérimentant les deux scénarios, l'utilisateur peut directement
+                        <strong>mesurer l'impact des dispositifs de sécurité</strong> sur l'issue de l'accident,
+                        favorisant ainsi une prise de conscience concrète des risques réels sur le terrain.
+                    </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img src="TerrariskVR/img/Env1.png" alt="Vue du chantier en VR" class="img-fluid inline-img">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center g-3 mb-5">
+                    <div class="col-md-5">
+                        <img src="TerrariskVR/img/Env4.png" alt="Simulation de l'éboulement" class="img-fluid inline-img w-100" style="object-fit: cover; max-height: 250px;">
+                    </div>
+                    <div class="col-md-5">
+                        <img src="TerrariskVR/img/Env5.png" alt="Vue intérieure de l'ensevelissement" class="img-fluid inline-img w-100" style="object-fit: cover; max-height: 250px;">
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 4. MON RÔLE -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-person-workspace text-primary me-2"></i>Mon rôle et mes contributions</h3>
+                <p class="text-light mb-4">
+                    Au sein de l'équipe, j'ai occupé les rôles suivants :
+                </p>
+                <div class="card bg-transparent border border-secondary mb-5">
+                    <div class="card-body">
+                        <ul class="text-light mb-0">
+                            <li class="mb-2"><strong>Lead technique et intégration :</strong> Programmation des mécaniques interactives en C# sur Unity et intégration du SDK OpenXR pour le déploiement sur casque.</li>
+                            <li class="mb-2"><strong>Pipeline 3D et physique :</strong> Participation à l'élaboration des assets 3D, création de la simulation physique de destruction sous Blender, puis baking de l'éboulement pour l'intégrer au moteur de jeu.</li>
+                            <li class="mb-2"><strong>Réalisation audiovisuelle :</strong> Écriture, tournage et montage de la vidéo de présentation du projet.</li>
+                            <li class="mb-0"><strong>Gestion de projet :</strong> Coordination de l'équipe, suivi via Git et préparation globale du stand de présentation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. DÉFIS -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Défis techniques et organisationnels</h3>
+                
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">1. Simulation physique (Blender → Unity)</h5>
+                    <p class="text-light">
+                        Pour simuler l'ensevelissement sans impacter les performances du casque, j'ai déporté le calcul physique sur Blender. La simulation de destruction des blocs de terre a été précalculée (baked), puis exportée sous forme d'animation vers Unity. Cette approche offre une destruction visuellement correcte tout en limitant l'utilisation du processeur.
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">2. Optimisation Meta Quest 3 (standalone)</h5>
+                    <p class="text-light">
+                        L'application devait tourner de manière autonome (sans PC filaire). J'ai supervisé l'optimisation des maillages 3D (LOD), la cuisson des lumières (lightmapping) et la limitation des particules dynamiques pour garantir une fluidité stable (72/90 FPS), un critère essentiel pour le confort en VR.
+                    </p>
+                </div>
+
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">3. Gestion d'une équipe pluridisciplinaire</h5>
+                    <p class="text-light">
+                        Au-delà du développement technique, j'ai coordonné une équipe de 6 étudiants aux profils très variés (informatique et marketing, de la L1 au M2). La mise en place d'un workflow Git et la répartition claire des tâches ont permis de synchroniser le travail et de livrer le prototype dans un délai restreint de deux semaines.
+                    </p>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 6. RÉSULTATS ET BILAN -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-graph-up-arrow text-primary me-2"></i>Résultats et bilan</h3>
+                <p class="text-light">
+                    Au terme du projet, nous avons livré un prototype VR autonome et fonctionnel.
+                </p>
+                <ul class="text-light mb-5">
+                    <li class="mb-3"><strong>Validation industrielle :</strong> Le chargé d'affaires senior de GRDF a testé et validé le prototype lors de notre présentation de fin de projet.</li>
+                    <li class="mb-0"><strong>Perspectives :</strong> Suite à cette validation, GRDF envisage de poursuivre le développement de la solution en recrutant potentiellement un ingénieur ou un stagiaire dédié.</li>
+                </ul>
+
+                <!-- 7. PRIX ET RÉCOMPENSE -->
+                <div class="alert bg-dark border border-warning text-white mb-5 d-flex align-items-center shadow-lg" role="alert" style="border-radius: 12px;">
+                    <i class="bi bi-award-fill text-warning fs-1 me-4"></i>
+                    <div>
+                        <h5 class="alert-heading fw-bold text-warning mb-1">Prix « Force de conviction »</h5>
+                        <p class="mb-0 text-secondary" style="font-size: 0.95rem;">
+                            Le projet a été récompensé par ce prix lors du Défi Chal'enge, soulignant la clarté de la présentation vidéo, la lisibilité du message pédagogique et la viabilité technique de la solution.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <section class="container py-5">
-        <h3 class="text-white fw-bold mb-4"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
-        <div class="row g-3">
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env7.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env8.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Stand_Chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Stand de présentation TerrariskVR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Prix__chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Prix de l'innovation obtenu" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre1.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre2.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+    <!-- FICHE TECHNIQUE -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Fiche technique du projet</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Durée</strong>
+                                <span class="text-light">15 jours</span>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Équipe</strong>
+                                <span class="text-light">6 étudiants (2× M2, 1× M1, 1× L3, 1× L1, 1× bachelor)</span>
+                            </div>
+                            <div class="col-sm-12 col-md-5">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">Unity 6</span>
+                                    <span class="badge bg-dark border border-secondary">OpenXR</span>
+                                    <span class="badge bg-dark border border-secondary">Blender</span>
+                                    <span class="badge bg-dark border border-secondary">3ds Max</span>
+                                    <span class="badge bg-dark border border-secondary">Meta Quest 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- GALERIE DU PROJET -->
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env1.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Vue du chantier en VR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env2.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Terrassement non conforme" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env3.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Simulation de l'éboulement" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env4.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Terrassement non conforme" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env5.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Éboulement" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env6.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Terrassement conforme" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env7.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Éboulement vu de l'intérieur" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env8.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Chantier" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Stand_Chal.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Notre stand lors du Défi Chal'enge" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Prix__chal.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Remise du prix Force de conviction" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/TestApp.jpeg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Test de l'application" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
     <footer class="bg-body-tertiary text-center py-4 mt-5">
         <div class="container">
             <p class="mb-0">© 2026 Mans Léo Portfolio</p>
@@ -221,13 +364,15 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         </div>
     </footer>
 
+    <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Modal pour la galerie (lightbox) -->
     <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content bg-transparent border-0">
                 <div class="modal-body p-0 text-center position-relative">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Fermer" style="z-index: 10;"></button>
                     <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Vue agrandie">
                     <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
                 </div>
@@ -235,22 +380,32 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         </div>
     </div>
 
+    <!-- Script de la lightbox -->
     <script>
-        const lightboxModal = document.getElementById('lightboxModal');
-        const modalImage = document.getElementById('modalImage');
-        const modalCaption = document.getElementById('modalCaption');
-
-        lightboxModal.addEventListener('show.bs.modal', function (event) {
-            const imageClicked = event.relatedTarget;
-            const src = imageClicked.getAttribute('src');
-            const altText = imageClicked.getAttribute('alt');
-            
-            modalImage.setAttribute('src', src);
-            if(altText) {
-                modalCaption.textContent = altText;
-                modalCaption.classList.remove('d-none');
-            } else {
-                modalCaption.classList.add('d-none');
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightboxModal = document.getElementById('lightboxModal');
+            if (lightboxModal) {
+                lightboxModal.addEventListener('show.bs.modal', function (event) {
+                    const imageClicked = event.relatedTarget;
+                    if (imageClicked) {
+                        const src = imageClicked.getAttribute('src');
+                        const altText = imageClicked.getAttribute('alt');
+                        
+                        const modalImage = document.getElementById('modalImage');
+                        const modalCaption = document.getElementById('modalCaption');
+                        
+                        if (modalImage) modalImage.setAttribute('src', src);
+                        
+                        if (modalCaption) {
+                            if (altText) {
+                                modalCaption.textContent = altText;
+                                modalCaption.classList.remove('d-none');
+                            } else {
+                                modalCaption.classList.add('d-none');
+                            }
+                        }
+                    }
+                });
             }
         });
     </script>

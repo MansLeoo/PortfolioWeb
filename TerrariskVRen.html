@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TerrariskVR | Mans Léo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .ratio-16x9 {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .tech-card {
+            background-color: #212529;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+        }
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="Indexen.html">Mans Léo Portfolio</a>
+        <div class="ms-auto d-flex align-items-center gap-3">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-translate me-1"></i> EN
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="TramDijon.html">🇫🇷 Français</a></li>
+                    <li><a class="dropdown-item active" href="#">🇬🇧 English</a></li>
+                </ul>
+            </div>
+            <a href="Indexen.html" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-arrow-left"></i> Back
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Header -->
+    <section class="container py-5 mt-4">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
+                <div class="mb-3">
+                    <span class="badge bg-primary">Défi Chal'enge</span>
+                    <span class="badge border border-primary text-primary">Unity</span>
+                    <span class="badge border border-primary text-primary">VR</span>
+                    <span class="badge border border-primary text-primary">Training / Safety</span>
+                </div>
+                <h1 class="display-4 fw-bold text-white">TerrariskVR</h1>
+                <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                    A VR awareness application about collapse hazards, developed for GRDF.
+                </p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="https://github.com/MansLeoo/TerrariskVR" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> View Code</a>
+                    <a href="TerrariskVR/TerrariskVR_pres.pdf" target="_blank" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> View Slides</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+
+                <!-- 1. STAKEHOLDERS -->
+                <div class="row mb-4 g-4">
+                    <div class="col-md-6">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="TerrariskVR/img/ChalLogo.jpg" alt="Défi Chal'enge Logo" class="img-fluid rounded me-3" style="height: 50px; background-color: white; padding: 2px;">
+                                    <h5 class="fw-bold text-white mb-0">The Défi Chal'enge</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    A 15-day academic project bringing together students from <strong>Arts et Métiers</strong>, <strong>CNAM BFC (Computer Science degree)</strong> and <strong>EGC Centre-Est (Marketing bachelor)</strong>. The goal is to combine diverse technical (VR, AI) and strategic expertise to design functional prototypes addressing real business needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="TerrariskVR/img/GrdfLogo.jpg" alt="GRDF Logo" class="img-fluid rounded me-3" style="height: 50px; background-color: white; padding: 5px;">
+                                    <h5 class="fw-bold text-white mb-0">GRDF</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    France's main natural gas distribution network operator. Its activities involve extensive work on public roads, requiring ongoing training programmes to ensure the safety of technicians during underground and trench operations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. CONTEXT & GOALS -->
+                <h3 class="text-white fw-bold mb-4 mt-5"><i class="bi bi-bullseye text-primary me-2"></i>Context & Goals</h3>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">Background and field observations</h5>
+                    <p class="text-light">
+                        Developed as part of the <strong>Défi Chal'enge</strong> (an intensive 15-day project), our team of 6 students (two Master 2, one Master 1, one L3, one L1 Computer Science and one Marketing bachelor) chose the challenge submitted by GRDF. Throughout the development, we worked closely with a <strong>Senior Business Manager</strong> from the company. GRDF places occupational risk prevention at the heart of its priorities. Currently, the company uses physical scale models to simulate accidents related to earthworks. However, these setups remain static and offer limited interactivity. Cave-in accidents still occur due to a <strong>limited perception of real hazards</strong> and insufficient training for sudden unexpected situations.
+                    </p>
+                    <div class="text-center my-4">
+                        <figure class="figure">
+                            <img src="TerrariskVR/img/maquette.jpg" alt="GRDF physical scale model" class="img-fluid inline-img figure-img" style="max-height: 350px;">
+                            <figcaption class="figure-caption text-light mt-2">Static physical scale model used by GRDF during training sessions.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">Our mission and learning objectives</h5>
+                    <p class="text-light">
+                        To address this lack of engagement, we designed a Virtual Reality experience that simulates hazardous environments without putting operators at risk. The application specifically aims to:
+                    </p>
+                    <ul class="text-light">
+                        <li class="mb-2"><strong>Raise awareness</strong> among technicians about the dangers of cave-ins in excavation sites.</li>
+                        <li class="mb-2"><strong>Recognise</strong> the warning signs indicating an imminent collapse.</li>
+                        <li class="mb-2"><strong>Experience</strong> the consequences of a poor decision in a safe environment.</li>
+                        <li class="mb-2"><strong>Strengthen retention</strong> through immersion and immediate feedback.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">Priority risks targeted</h5>
+                    <ul class="text-light mt-3">
+                        <li class="mb-3">
+                            <strong>Burial risk:</strong> A collapse caused by material instability (trench depth, nearby truck vibrations, water runoff).
+                        </li>
+                        <li class="mb-2">
+                            <strong>Falling materials:</strong> A hazard linked to non-compliant shoring (bracing), such as planks that are too thin or poorly positioned props.
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 3. THE APPLICATION -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>The Application</h3>
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            In practice, TerrariskVR simulates a residential street worksite currently undergoing excavation.
+                            Wearing a Meta Quest 3 headset, the learner plays the role of a technician free to move
+                            throughout the environment.
+                        </p>
+                        <p class="text-light">
+                            The application features <strong>two distinct Unity scenes</strong>: one set in a
+                            <strong>secured trench</strong> (properly shored and marked out), the other in an
+                            <strong>unsecured trench</strong>. In both scenes, an external event such as a passing truck
+                            triggers vibrations and causes a cave-in. By experiencing both scenarios, the user can
+                            directly <strong>observe the impact of safety measures</strong> on the outcome,
+                            making the real on-site risks tangible and memorable.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <img src="TerrariskVR/img/Env1.png" alt="VR worksite view" class="img-fluid inline-img">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center g-3 mb-5">
+                    <div class="col-md-5">
+                        <img src="TerrariskVR/img/Env4.png" alt="Cave-in simulation" class="img-fluid inline-img w-100" style="object-fit: cover; max-height: 250px;">
+                    </div>
+                    <div class="col-md-5">
+                        <img src="TerrariskVR/img/Env5.png" alt="View from inside the burial" class="img-fluid inline-img w-100" style="object-fit: cover; max-height: 250px;">
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 4. MY ROLE -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-person-workspace text-primary me-2"></i>My Role & Contributions</h3>
+                <p class="text-light mb-4">
+                    Within the team, I held the following roles:
+                </p>
+                <div class="card bg-transparent border border-secondary mb-5">
+                    <div class="card-body">
+                        <ul class="text-light mb-0">
+                            <li class="mb-2"><strong>Technical Lead & Integration:</strong> Programming interactive mechanics in C# with Unity and integrating the OpenXR SDK for headset deployment.</li>
+                            <li class="mb-2"><strong>3D Pipeline & Physics:</strong> Contributing to the creation of 3D assets, building the physics-based destruction simulation in Blender, then baking the cave-in for integration into the game engine.</li>
+                            <li class="mb-2"><strong>Audiovisual Production:</strong> Writing, filming and editing the project presentation video.</li>
+                            <li class="mb-0"><strong>Project Management:</strong> Coordinating the team, tracking progress via Git and preparing the overall presentation stand.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. CHALLENGES -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Technical & Organisational Challenges</h3>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">1. Physics simulation (Blender → Unity)</h5>
+                    <p class="text-light">
+                        To simulate the burial without impacting the headset's performance, I offloaded the physics calculation to Blender. The destruction simulation of the earth blocks was pre-computed (baked), then exported as an animation into Unity. This approach delivers visually convincing destruction while keeping CPU usage low.
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">2. Meta Quest 3 optimisation (standalone)</h5>
+                    <p class="text-light">
+                        The application had to run autonomously (without a tethered PC). I supervised the optimisation of 3D meshes (LOD), light baking (lightmapping) and the limitation of dynamic particles to ensure stable performance (72/90 FPS) — an essential criterion for comfort in VR.
+                    </p>
+                </div>
+
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">3. Managing a multidisciplinary team</h5>
+                    <p class="text-light">
+                        Beyond the technical development, I coordinated a team of 6 students with very different profiles (computer science and marketing, from first year to Master 2). Setting up a Git workflow and clearly distributing tasks allowed us to synchronise our work and deliver the prototype within a tight two-week deadline.
+                    </p>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 6. RESULTS & SUMMARY -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-graph-up-arrow text-primary me-2"></i>Results & Summary</h3>
+                <p class="text-light">
+                    At the end of the project, we delivered a fully functional standalone VR prototype.
+                </p>
+                <ul class="text-light mb-5">
+                    <li class="mb-3"><strong>Industry validation:</strong> The Senior Business Manager at GRDF tested and validated the prototype during our final project presentation.</li>
+                    <li class="mb-0"><strong>Outlook:</strong> Following this validation, GRDF is considering continuing development of the solution by potentially hiring a dedicated engineer or intern.</li>
+                </ul>
+
+                <!-- 7. AWARD -->
+                <div class="alert bg-dark border border-warning text-white mb-5 d-flex align-items-center shadow-lg" role="alert" style="border-radius: 12px;">
+                    <i class="bi bi-award-fill text-warning fs-1 me-4"></i>
+                    <div>
+                        <h5 class="alert-heading fw-bold text-warning mb-1">"Force of Conviction" Award</h5>
+                        <p class="mb-0 text-secondary" style="font-size: 0.95rem;">
+                            The project received this award at the Défi Chal'enge, recognising the clarity of the video presentation, the accessibility of the educational message and the technical viability of the solution.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT SPECS -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Project Specifications</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Duration</strong>
+                                <span class="text-light">15 days</span>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Team</strong>
+                                <span class="text-light">6 students (2× M2, 1× M1, 1× L3, 1× L1, 1× bachelor)</span>
+                            </div>
+                            <div class="col-sm-12 col-md-5">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">Unity 6</span>
+                                    <span class="badge bg-dark border border-secondary">OpenXR</span>
+                                    <span class="badge bg-dark border border-secondary">Blender</span>
+                                    <span class="badge bg-dark border border-secondary">3ds Max</span>
+                                    <span class="badge bg-dark border border-secondary">Meta Quest 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Project Gallery</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env1.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="VR worksite view" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env2.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Non-compliant excavation" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env3.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Cave-in simulation" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env4.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Non-compliant excavation" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env5.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Cave-in" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env6.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Compliant excavation" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env7.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Cave-in seen from inside" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Env8.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Worksite" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Stand_Chal.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Our stand at the Défi Chal'enge" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/Prix__chal.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Receiving the Force of Conviction award" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="TerrariskVR/img/TestApp.jpeg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Testing the application" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2026 Mans Léo Portfolio</p>
+            <a href="Indexen.html" class="small text-decoration-none">Back to home</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Modal (Lightbox) -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Enlarged view">
+                    <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightboxModal = document.getElementById('lightboxModal');
+            if (lightboxModal) {
+                lightboxModal.addEventListener('show.bs.modal', function (event) {
+                    const imageClicked = event.relatedTarget;
+                    if (imageClicked) {
+                        const src = imageClicked.getAttribute('src');
+                        const altText = imageClicked.getAttribute('alt');
+                        const modalImage = document.getElementById('modalImage');
+                        const modalCaption = document.getElementById('modalCaption');
+                        if (modalImage) modalImage.setAttribute('src', src);
+                        if (modalCaption) {
+                            if (altText) {
+                                modalCaption.textContent = altText;
+                                modalCaption.classList.remove('d-none');
+                            } else {
+                                modalCaption.classList.add('d-none');
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

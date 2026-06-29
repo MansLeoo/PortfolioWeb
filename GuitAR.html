@@ -22,7 +22,7 @@
             border-radius: 12px;
         }
 
-        /* Petit effet au survol des images de la galerie */
+        /* Effet au survol des images de la galerie */
         .gallery-img {
             transition: transform 0.3s ease;
         }
@@ -30,23 +30,29 @@
             transform: scale(1.02);
             filter: brightness(1.1);
         }
+        
+        /* Style pour les images intégrées dans le texte */
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
+        <a class="navbar-brand fw-bold" href="index.html">Portfolio de Mans Léo</a>
         
         <div class="ms-auto d-flex align-items-center gap-3">
-            
             <div class="dropdown">
                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-translate me-1"></i> FR
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
-                    <li><a class="dropdown-item" href="vertech-en.html">🇬🇧 English</a></li>
+                    <li><a class="dropdown-item" href="GuitARen.html">🇬🇧 English</a></li>
                 </ul>
             </div>
 
@@ -58,162 +64,221 @@
 </nav>
 
     <section class="container py-5 mt-4">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
                 <div class="mb-3">
-                    <span class="badge bg-primary">Défi Chal'enge</span>
+                    <span class="badge bg-primary">Recherche Appliquée</span>
                     <span class="badge border border-primary text-primary">Unity</span>
-                    <span class="badge border border-primary text-primary">VR</span>
-                    <span class="badge border border-primary text-primary">Formation</span>
+                    <span class="badge border border-primary text-primary">AR / Passthrough</span>
+                    <span class="badge border border-primary text-primary">Musique</span>
                 </div>
-                <h1 class="display-4 fw-bold text-white">TerrariskVR</h1>
-                <p class="lead text-secondary">
-                    Application de sensibilisation aux risques d'éboulements pour GRDF. 
-                    Simulation physique temps réel et pédagogie immersive.
+                <h1 class="display-4 fw-bold text-white">Guit'AR</h1>
+                <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+                    Application de réalité augmentée conçue pour faciliter l'apprentissage intuitif des gammes à la guitare grâce au suivi des mains.
                 </p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="https://github.com/MansLeoo/TerrariskVR" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
-                    <a href="TerrariskVR/TerrariskVR_pres.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
-                </div>
             </div>
         </div>
     </section>
 
     <section class="container mb-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+            <div class="col-lg-9 text-center">
+                <figure class="m-0">
+                    <img src="GuitAR/img/TestApp.jpg" alt="Test de l'application par des étudiants du Conservatoire du Grand Chalon" class="img-fluid inline-img rounded w-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 500px; object-fit: cover;">
+                    <figcaption class="text-secondary small mt-2">Test de l'application par des étudiants du Conservatoire du Grand Chalon</figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
     <section class="container py-4">
-        <div class="row g-5">
-            
-            <div class="col-lg-8">
-                <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
-                <p>
-                    Dans le cadre du Défi Chal'enge, j'ai piloté une équipe pluridisciplinaire pour répondre à une problématique de GRDF : le manque d'impact des formations sécurité traditionnelles (PowerPoint, maquettes).
-
-Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle immersive. Plongé dans un chantier de rue pavillonnaire, l'apprenant a la liberté de descendre dans une tranchée non sécurisée pour vivre un ensevelissement de l'intérieur, accident déclenché par les vibrations d'un camion à proximité.
-                </p>
-
-
-<hr class="my-5 border-secondary">
- 
-<h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">1. Simulation Physique (Blender → Unity)</h5>
-    <p >Pour garantir un rendu visuel impressionnant sans impacter les performances temps réel, j'ai déporté le calcul physique de l'éboulement sur Blender. La simulation de destruction a été pré-calculée (baked), puis exportée sous forme d'animation optimisée vers Unity. Cette approche hybride offre un rendu exploitable tout en maintenant un framerate stable sur le casque VR.</p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">2. Optimisation Meta Quest 3 (Standalone)</h5>
-    <p >
-        L'application devait tourner de manière autonome (sans PC) sur le meta Quest 3.
-        J'ai dû faire en sorte que les modeles 3D soient optimisé, qu'il n'y est aps trop de lumiere et que l'animation d'énoulement ne sois pas trop lourde pour garantir une fluidité parfaite (72/90 FPS) malgré la complexité de la scène 3D.
-    </p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">3. Gestion d'équipe (6 personnes)</h5>
-    <p >
-        Au-delà du développement, j'ai assuré le lead technique et organisationnel d'une <strong>équipe de 6 personnes</strong> (graphistes et développeurs).
-        Mise en place du workflow Git, répartition des tâches et respect d'une deadline courte (2 semaines) dans le cadre du Défi Chal'enge.
-    </p>
-</div>
-</div>
-
-            <div class="col-lg-4">
-                <div class="tech-card p-4 sticky-top" style="top: 100px;">
-                    <h4 class="fw-bold mb-4">Fiche Technique</h4>
-                    
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
-                            <span>Chef de projet / Développeur / Graphiste 3D / Monteur Vidéo</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Durée</strong>
-                            <span>2 semaines (Jan 19 - Jan 30)</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
-                            <span>1 Développeur, 4 Graphistes 3D</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
-                            <div class="mt-2 d-flex flex-wrap gap-2">
-                                <span class="badge bg-dark border border-secondary">C#</span>
-                                <span class="badge bg-dark border border-secondary">Unity 6</span>
-                                <span class="badge bg-dark border border-secondary">OpenXR</span>
-                                <span class="badge bg-dark border border-secondary">Blender</span>
-                                <span class="badge bg-dark border border-secondary">3dsMax</span>
-                                <span class="badge bg-dark border border-secondary">MetaQuest3</span>
-                                <span class="badge bg-dark border border-secondary">Git</span>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <!-- 1. ACTEURS -->
+                <div class="row justify-content-center mb-4 g-4">
+                    <div class="col-md-10">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-white rounded d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; padding: 5px;">
+                                        <i class="bi bi-music-note-beamed text-primary fs-3"></i>
+                                    </div>
+                                    <h5 class="fw-bold text-white mb-0">Conservatoire du Grand Chalon</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    Établissement d'enseignement artistique. Ce projet a été mené en collaboration directe avec le Conservatoire pour concevoir un outil pédagogique innovant, pensé par et pour des musiciens.
+                                </p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
 
-                    <hr class="border-secondary">
-                    
-                    <h5 class="fw-bold mb-3 small">Compétences clés</h5>
-                    <ul class="text-secondary small ps-3">
-                        <li>Simulation Physique sur Blender</li>
-                        <li>Optimisation sur Unity</li>
-                        <li>UX Design en VR</li>
-                    </ul>
+                <!-- 2. CONTEXTE ET OBJECTIFS -->
+                <h3 class="text-white fw-bold mb-4 mt-5"><i class="bi bi-bullseye text-primary me-2"></i>Contexte et objectifs</h3>
+                
+                <div class="mb-4">
+                    <p class="text-light">
+                        Ce projet s'inscrit dans le cadre d'un Master et a été réalisé en étroite collaboration avec le Conservatoire de Musique du Grand Chalon, et plus particulièrement avec le professeur-chercheur M. Hackerman. 
+                    </p>
+                    <p class="text-light">
+                        L'objectif de cette recherche appliquée était d'expérimenter l'utilisation de la réalité augmentée comme nouvel outil pédagogique pour l'apprentissage des gammes à la guitare, en s'affranchissant des limites des partitions papier traditionnelles.
+                    </p>
+                </div>
+                
+                <hr class="my-5 border-secondary">
+
+                <!-- 3. L'APPLICATION RÉALISÉE -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>L'application développée</h3>
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            Une application de réalité augmentée a été développée, permettant à l'utilisateur de visualiser des schémas de gammes et de les déplacer librement dans son champ de vision. Cela représente un avantage ergonomique majeur par rapport à une simple feuille de papier posée sur un pupitre.
+                        </p>
+                        <p class="text-light">
+                            De plus, pour faciliter l'apprentissage visuel, il est possible d'afficher ces gammes directement sur une guitare virtuelle 3D. L'utilisateur peut ainsi voir "en miroir" le placement exact des doigts et le reproduire sur sa propre guitare. Pour des raisons pratiques et d'immersion, l'application exploite le suivi des mains, libérant totalement le musicien des manettes.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="GuitAR/img/Interface.png" alt="Interface utilisateur et affichage des gammes" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px;">
+                            <figcaption class="text-secondary small mt-2">Interface spatiale et affichage des schémas</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 flex-md-row-reverse">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            L'objectif initial prévoyait également le suivi en temps réel d'une véritable guitare physique pour y superposer directement les notes en surimpression. Des tests ont été menés à l'aide de QR codes placés sur l'instrument, mais n'ont pas été totalement concluants dans le temps imparti.
+                        </p>
+                        <p class="text-light">
+                            Enfin, cette expérimentation a permis de mettre en évidence certaines limites matérielles pour ce cas d'usage précis. Les défis liés à la résolution des caméras Passthrough pour lire des détails fins, ainsi que la légère latence perçue lors de mouvements de jeu rapides, ont notamment été documentés.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="GuitAR/img/GuitAR1.png" alt="Guitare virtuelle affichant les notes" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px;">
+                            <figcaption class="text-secondary small mt-2">Visualisation des placements sur la guitare virtuelle</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 4. DEFIS TECHNIQUES -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Défis techniques</h3>
+
+
+                <!-- Contribution 1 -->
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">1. Interface spatiale et suivi des mains</h5>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-md-7 mb-3 mb-md-0">
+                            <p class="text-light">
+                                Conception d'une interface utilisateur manipulable intuitivement avec les mains, comme pincer pour attraper ou faire glisser pour déplacer. L'utilisateur interagit avec des panneaux flottants contenant les gammes, sans jamais avoir besoin de lâcher sa guitare pour reprendre une manette.
+                            </p>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <figure class="m-0">
+                                <img src="GuitAR/img/Interface2.png" alt="Interface avec poignée" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Interface avec poignée de manipulation</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 2 -->
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">2. Prototypage du tracking d'instrument</h5>
+                    <p class="text-light mt-3">
+                        Recherche et implémentation de solutions pour le suivi d'une guitare physique dans l'espace. Plusieurs approches ont été expérimentées, avec et sans l'utilisation de QR codes et de marqueurs fiduciaux, pour tenter d'ancrer les hologrammes directement sur le manche de l'instrument en mouvement.
+                    </p>
+                    <div class="row justify-content-center align-items-center g-4 mt-2">
+                        <div class="col-md-4 text-center">
+                            <figure class="m-0">
+                                <img src="GuitAR/img/QrCode.png" alt="Tests de tracking via QR code" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Expérimentation du tracking via marqueurs</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <figure class="m-0">
+                                <img src="GuitAR/img/Positions.png" alt="Limites du tracking par QR Code" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Problèmes d'occlusion et d'angle de vue liés au QR Code</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr class="my-5 border-secondary">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FICHE TECHNIQUE -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Fiche technique du projet</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Cadre</strong>
+                                <span class="text-light">Projet de Master</span>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Rôle</strong>
+                                <span class="text-light">Développeur AR</span>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">Unity 3D</span>
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">Meta XR SDK</span>
+                                    <span class="badge bg-dark border border-secondary">Passthrough AR</span>
+                                    <span class="badge bg-dark border border-secondary">Hand Tracking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section class="container py-5">
-        <h3 class="text-white fw-bold mb-4"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
-        <div class="row g-3">
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env7.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env8.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Stand_Chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Stand de présentation TerrariskVR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Prix__chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Prix de l'innovation obtenu" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre1.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre2.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+    <!-- GALERIE DU PROJET -->
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/Guitar.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Guitare virtuelle" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/GuitAR1.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Interface utilisateur" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/GuitAR3.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Interface utilisateur" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/QrCode.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Guitare avec QR Code" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/TestApp.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Test utilisateur au Conservatoire" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Pied de page -->
     <footer class="bg-body-tertiary text-center py-4 mt-5">
         <div class="container">
             <p class="mb-0">© 2026 Mans Léo Portfolio</p>
@@ -221,13 +286,15 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         </div>
     </footer>
 
+    <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Modal pour la galerie (lightbox) -->
     <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content bg-transparent border-0">
                 <div class="modal-body p-0 text-center position-relative">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Fermer" style="z-index: 10;"></button>
                     <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Vue agrandie">
                     <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
                 </div>
@@ -235,22 +302,32 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         </div>
     </div>
 
+    <!-- Script de la lightbox -->
     <script>
-        const lightboxModal = document.getElementById('lightboxModal');
-        const modalImage = document.getElementById('modalImage');
-        const modalCaption = document.getElementById('modalCaption');
-
-        lightboxModal.addEventListener('show.bs.modal', function (event) {
-            const imageClicked = event.relatedTarget;
-            const src = imageClicked.getAttribute('src');
-            const altText = imageClicked.getAttribute('alt');
-            
-            modalImage.setAttribute('src', src);
-            if(altText) {
-                modalCaption.textContent = altText;
-                modalCaption.classList.remove('d-none');
-            } else {
-                modalCaption.classList.add('d-none');
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightboxModal = document.getElementById('lightboxModal');
+            if (lightboxModal) {
+                lightboxModal.addEventListener('show.bs.modal', function (event) {
+                    const imageClicked = event.relatedTarget;
+                    if (imageClicked) {
+                        const src = imageClicked.getAttribute('src');
+                        const altText = imageClicked.getAttribute('alt');
+                        
+                        const modalImage = document.getElementById('modalImage');
+                        const modalCaption = document.getElementById('modalCaption');
+                        
+                        if (modalImage) modalImage.setAttribute('src', src);
+                        
+                        if (modalCaption) {
+                            if (altText) {
+                                modalCaption.textContent = altText;
+                                modalCaption.classList.remove('d-none');
+                            } else {
+                                modalCaption.classList.add('d-none');
+                            }
+                        }
+                    }
+                });
             }
         });
     </script>

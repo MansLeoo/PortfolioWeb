@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cybersickness Study | Mans Léo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        .ratio-16x9 {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+        
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="Indexen.html">Mans Léo Portfolio</a>
+            
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-translate me-1"></i> EN
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="cybersickness.html">🇫🇷 Français</a></li>
+                        <li><a class="dropdown-item active" href="#">🇬🇧 English</a></li>
+                    </ul>
+                </div>
+
+                <a href="Indexen.html" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-arrow-left"></i> Back
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5 mt-4">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
+                <div class="mb-3">
+                    <span class="badge bg-primary">Applied Research</span>
+                    <span class="badge border border-primary text-primary">VR</span>
+                    <span class="badge border border-primary text-primary">UX / Cognitive Sciences</span>
+                </div>
+                <h1 class="display-4 fw-bold text-white">Cybersickness Study</h1>
+                <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+                    Scientific research and virtual reality experimentation aimed at analyzing, 
+                    measuring, and understanding the triggers of virtual reality sickness (cybersickness) among users.
+                </p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="Cybersickness/Paper.pdf" class="btn btn-primary btn-lg" target="_blank"><i class="bi bi-file-earmark-text"></i> Read the scientific paper</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-bullseye text-primary me-2"></i>Context and objectives</h3>
+                <div class="mb-4">
+                    <p class="text-light">
+                        This project was carried out as part of a scientific experimentation module. The goal was particularly ambitious: <strong>to conduct a complete research project from A to Z in less than a week</strong> (4 days). 
+                    </p>
+                    <p class="text-light">
+                        In <strong>groups of 3 students</strong>, we had to manage the entire scientific process: conducting a state-of-the-art review, designing the experimental protocol, developing the VR application in Unity, running user tests, and finally, performing a statistical analysis of the collected data.
+                    </p>
+                    <p class="text-light">
+                        Our team chose to focus our research on <strong>cybersickness</strong> (motion sickness induced by virtual reality). Our study specifically aimed to evaluate the impact of <strong>various visual modalities</strong> (such as dynamic field of view reduction) to mitigate this discomfort during user locomotion.
+                    </p>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>The developed application</h3>
+                
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            To guarantee the scientific rigor of the study, we developed a <strong>rollercoaster</strong> simulation. This choice allowed us to impose a passive, constant movement that was identical for all participants, thereby eliminating biases related to how a user might freely navigate with a controller.
+                        </p>
+                        <p class="text-light">
+                            To ensure that participants stayed attentive and kept their eyes open during the experience (rather than closing them to avoid nausea), they were assigned a <strong>cognitive task</strong>: they had to mentally count the number of times they were upside down (the loops).
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Cybersickness/img/MotionSickness_Screenshot.png" alt="Rollercoaster Environment" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                            <figcaption class="text-secondary small mt-2">View of the test environment (Rollercoaster)</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-4 flex-md-row-reverse">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">Regarding the protocol, the developed application integrated several <strong>visual modalities</strong> that could be activated to compare their effectiveness in reducing cybersickness:</p>
+                        <ul class="text-light mb-0">
+                            <li class="mb-2"><strong>Control:</strong> No visual modification.</li>
+                            <li class="mb-2"><strong>Dynamic Blur + Reticle:</strong> Blurring peripheral vision during fast movements.</li>
+                            <li class="mb-2"><strong>Dynamic FOV + Reticle:</strong> Reducing the field of view with a black vignette.</li>
+                            <li><strong>Total Combination:</strong> Dynamic FOV + Dynamic Blur + Central Reticle.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Cybersickness/img/Modalities.png" alt="The 4 tested visual modalities" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                            <figcaption class="text-secondary small mt-2">The 4 visual configurations of our protocol</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-person-workspace text-primary me-2"></i>My role in the project</h3>
+                <div class="card bg-transparent border border-secondary mb-5">
+                    <div class="card-body">
+                        <ul class="text-light mb-0">
+                            <li class="mb-2"><strong>Research and state of the art:</strong> Analyzing existing scientific literature on virtual reality sickness and integrating solutions to reduce this discomfort.</li>
+                            <li class="mb-2"><strong>Conducting user tests:</strong> Welcoming testers, explaining the cognitive task, launching the simulation, and collecting data.</li>
+                            <li class="mb-2"><strong>Academic writing:</strong> Contributing to the analysis of results and writing the final scientific paper.</li>
+                            <li class="mb-0"><strong>Oral defense:</strong> Creating the entire visual presentation (slideshow) and presenting it to the jury.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+                
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Study Challenges</h3>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">1. Experimental protocol design</h5>
+                    <p class="text-light">
+                        We had to develop a standardized test environment in Unity. The challenge was to create a neutral and controlled scene capable of isolating specific variables (movement speed, type of movement) without introducing external biases into the user experience.
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">2. User data collection and analysis</h5>
+                    <p class="text-light">
+                        To measure discomfort scientifically, we conducted test sessions with a panel of users. We used standardized questionnaires, such as the <em>Simulator Sickness Questionnaire (SSQ)</em>, to cross-reference qualitative feedback with quantitative test data.
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold text-light">3. Writing a scientific paper in 4 days</h5>
+                    <p class="text-light">
+                        The time allotted for experimentation, data collection, and writing the article was extremely short (4 days). This required perfect coordination within the team to synthesize our findings into a rigorous academic format.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container text-center mb-5">
+        <a href="Cybersickness/Paper.pdf" class="btn btn-outline-light btn-lg px-5" target="_blank">
+            <i class="bi bi-file-earmark-pdf-fill me-2"></i>Read the full scientific paper
+        </a>
+    </section>
+    
+    <section class="container mb-5 mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Project Technical Sheet</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Role</strong>
+                                <span class="text-light">Experimenter<br>Co-Writer</span>
+                            </div>
+                            <div class="col-sm-6 col-md-2">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Duration</strong>
+                                <span class="text-light">4 days</span>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Team</strong>
+                                <span class="text-light">3 Students</span>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">Unity 6</span>
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">OpenXR</span>
+                                    <span class="badge bg-dark border border-secondary">Meta Quest 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Study Gallery</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Cybersickness/img/MotionSickness_Screenshot.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Test environment in Unity (Rollercoaster)" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Cybersickness/img/ExperimentPlan.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Experimental protocol diagram" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Cybersickness/img/fov.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Field of View (FOV) reduction test" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Cybersickness/img/graphe.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Comparative Analysis - Graph 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Cybersickness/img/graphe2.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Score Evolution - Graph 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <img src="Cybersickness/img/graphe3.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Data Correlation - Graph 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-body-tertiary text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2026 Mans Léo Portfolio</p>
+            <a href="Indexen.html" class="small text-decoration-none">Back to Home</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Enlarged view">
+                    <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const lightboxModal = document.getElementById('lightboxModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+
+        lightboxModal.addEventListener('show.bs.modal', function (event) {
+            const imageClicked = event.relatedTarget;
+            const src = imageClicked.getAttribute('src');
+            const altText = imageClicked.getAttribute('alt');
+            
+            modalImage.setAttribute('src', src);
+            if(altText) {
+                modalCaption.textContent = altText;
+                modalCaption.classList.remove('d-none');
+            } else {
+                modalCaption.classList.add('d-none');
+            }
+        });
+    </script>
+
+</body>
+</html>

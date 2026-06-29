@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TerrariskVR | Mans Léo</title>
+    <title>Math Escape Game | Mans Léo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
@@ -22,7 +22,7 @@
             border-radius: 12px;
         }
 
-        /* Petit effet au survol des images de la galerie */
+        /* Effet au survol des images de la galerie */
         .gallery-img {
             transition: transform 0.3s ease;
         }
@@ -30,23 +30,29 @@
             transform: scale(1.02);
             filter: brightness(1.1);
         }
+        
+        /* Style pour les images intégrées dans le texte */
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.html">Mans Léo Portfolio</a>
+        <a class="navbar-brand fw-bold" href="index.html">Portfolio de Mans Léo</a>
         
         <div class="ms-auto d-flex align-items-center gap-3">
-            
             <div class="dropdown">
                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-translate me-1"></i> FR
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item active" href="#">🇫🇷 Français</a></li>
-                    <li><a class="dropdown-item" href="vertech-en.html">🇬🇧 English</a></li>
+                    <li><a class="dropdown-item" href="Mathen.html">🇬🇧 English</a></li>
                 </ul>
             </div>
 
@@ -58,162 +64,257 @@
 </nav>
 
     <section class="container py-5 mt-4">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
                 <div class="mb-3">
-                    <span class="badge bg-primary">Défi Chal'enge</span>
+                    <span class="badge bg-primary">Stage</span>
                     <span class="badge border border-primary text-primary">Unity</span>
                     <span class="badge border border-primary text-primary">VR</span>
-                    <span class="badge border border-primary text-primary">Formation</span>
+                    <span class="badge border border-primary text-primary">Mathématiques</span>
+                    <span class="badge border border-primary text-primary">WebXR</span>
+
                 </div>
-                <h1 class="display-4 fw-bold text-white">TerrariskVR</h1>
-                <p class="lead text-secondary">
-                    Application de sensibilisation aux risques d'éboulements pour GRDF. 
-                    Simulation physique temps réel et pédagogie immersive.
+                <h1 class="display-4 fw-bold text-white">Escape Game Mathématique</h1>
+                <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+                    Application de réalité virtuelle pour la révision de l'algèbre linéaire.
                 </p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="https://github.com/MansLeoo/TerrariskVR" class="btn btn-primary btn-lg"><i class="bi bi-github"></i> Voir le code</a>
-                    <a href="TerrariskVR/TerrariskVR_pres.pdf" class="btn btn-outline-light btn-lg"><i class="bi bi-file-earmark-pdf"></i> Lire le rapport</a>
-                </div>
             </div>
         </div>
     </section>
 
     <section class="container mb-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/Gpo0_6DBpcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+            <div class="col-lg-9 text-center">
+                    <img src="Math/img/EscapeGameMath_Screenshot.png" alt="Aperçu de l'Escape Game mathématique" class="img-fluid inline-img rounded w-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 500px; object-fit: cover;">
+
             </div>
         </div>
     </section>
 
     <section class="container py-4">
-        <div class="row g-5">
-            
-            <div class="col-lg-8">
-                <h3 class="text-white fw-bold mb-3"><i class="bi bi-bullseye text-primary me-2"></i>Contexte & Objectifs</h3>
-                <p>
-                    Dans le cadre du Défi Chal'enge, j'ai piloté une équipe pluridisciplinaire pour répondre à une problématique de GRDF : le manque d'impact des formations sécurité traditionnelles (PowerPoint, maquettes).
-
-Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle immersive. Plongé dans un chantier de rue pavillonnaire, l'apprenant a la liberté de descendre dans une tranchée non sécurisée pour vivre un ensevelissement de l'intérieur, accident déclenché par les vibrations d'un camion à proximité.
-                </p>
-
-
-<hr class="my-5 border-secondary">
- 
-<h3 class="text-white fw-bold mb-3"><i class="bi bi-trophy-fill text-primary me-2"></i>Challenges</h3>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">1. Simulation Physique (Blender → Unity)</h5>
-    <p >Pour garantir un rendu visuel impressionnant sans impacter les performances temps réel, j'ai déporté le calcul physique de l'éboulement sur Blender. La simulation de destruction a été pré-calculée (baked), puis exportée sous forme d'animation optimisée vers Unity. Cette approche hybride offre un rendu exploitable tout en maintenant un framerate stable sur le casque VR.</p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">2. Optimisation Meta Quest 3 (Standalone)</h5>
-    <p >
-        L'application devait tourner de manière autonome (sans PC) sur le meta Quest 3.
-        J'ai dû faire en sorte que les modeles 3D soient optimisé, qu'il n'y est aps trop de lumiere et que l'animation d'énoulement ne sois pas trop lourde pour garantir une fluidité parfaite (72/90 FPS) malgré la complexité de la scène 3D.
-    </p>
-</div>
-
-<div class="mb-4">
-    <h5 class="fw-bold text-light">3. Gestion d'équipe (6 personnes)</h5>
-    <p >
-        Au-delà du développement, j'ai assuré le lead technique et organisationnel d'une <strong>équipe de 6 personnes</strong> (graphistes et développeurs).
-        Mise en place du workflow Git, répartition des tâches et respect d'une deadline courte (2 semaines) dans le cadre du Défi Chal'enge.
-    </p>
-</div>
-</div>
-
-            <div class="col-lg-4">
-                <div class="tech-card p-4 sticky-top" style="top: 100px;">
-                    <h4 class="fw-bold mb-4">Fiche Technique</h4>
-                    
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Rôle</strong>
-                            <span>Chef de projet / Développeur / Graphiste 3D / Monteur Vidéo</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Durée</strong>
-                            <span>2 semaines (Jan 19 - Jan 30)</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Équipe</strong>
-                            <span>1 Développeur, 4 Graphistes 3D</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="d-block text-secondary text-uppercase small">Technologies</strong>
-                            <div class="mt-2 d-flex flex-wrap gap-2">
-                                <span class="badge bg-dark border border-secondary">C#</span>
-                                <span class="badge bg-dark border border-secondary">Unity 6</span>
-                                <span class="badge bg-dark border border-secondary">OpenXR</span>
-                                <span class="badge bg-dark border border-secondary">Blender</span>
-                                <span class="badge bg-dark border border-secondary">3dsMax</span>
-                                <span class="badge bg-dark border border-secondary">MetaQuest3</span>
-                                <span class="badge bg-dark border border-secondary">Git</span>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <!-- 1. ACTEURS -->
+                <div class="row justify-content-center mb-4 g-4">
+                    <div class="col-md-10">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="Math/img/LPCLogo.png" alt="Logo LPC" class="img-fluid rounded me-3" style="height: 50px; background-color: white; padding: 5px;">
+                                    <h5 class="fw-bold text-white mb-0">Laboratoire de Physique de Clermont (LPC)</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    Le Laboratoire de Physique de Clermont (LPC) est une unité mixte de recherche (UMR 6533) rattachée au CNRS (IN2P3) et à l'Université Clermont Auvergne. Historiquement axé sur la physique des particules, il mène également des recherches interdisciplinaires de pointe appliquées aux domaines de la santé, de l'environnement et de l'énergie.
+                                </p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
 
-                    <hr class="border-secondary">
-                    
-                    <h5 class="fw-bold mb-3 small">Compétences clés</h5>
-                    <ul class="text-secondary small ps-3">
-                        <li>Simulation Physique sur Blender</li>
-                        <li>Optimisation sur Unity</li>
-                        <li>UX Design en VR</li>
-                    </ul>
+                <!-- 2. CONTEXTE ET OBJECTIFS -->
+                <h3 class="text-white fw-bold mb-4 mt-5"><i class="bi bi-bullseye text-primary me-2"></i>Contexte et objectifs</h3>
+                
+                <div class="mb-4">
+                    <p class="text-light">
+                        Ce projet s'inscrit dans le cadre de ma première année de Master et a été mené en étroite collaboration avec le Laboratoire de Physique de Clermont (LPC).
+                    </p>
+                    <p class="text-light">
+                        L'objectif de ce stage était de développer une application immersive et ludique en réalité virtuelle. Celle-ci est destinée à accompagner les étudiants de première année rencontrant des difficultés d'apprentissage en mathématiques. C'est pour répondre à ce besoin d'un support pédagogique innovant que l'idée d'un « Escape Game » en réalité virtuelle a été conçue.
+                    </p>
+                </div>
+                
+                <hr class="my-5 border-secondary">
+
+                <!-- 3. L'APPLICATION RÉALISÉE -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>L'application développée</h3>
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            L'utilisateur est plongé dans un environnement simulant un vaste laboratoire de mathématiques. Pour s'échapper du bâtiment le plus rapidement possible, il doit résoudre une succession d'énigmes, chacune faisant appel à des concepts mathématiques spécifiques.
+                        </p>
+                        <p class="text-light">
+                            Parmi les différentes notions abordées lors de cette expérience, l'étudiant est amené à mobiliser ses connaissances sur la théorie des ensembles, le calcul vectoriel et le calcul matriciel.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Math/img/Env1.png" alt="Environnement des ensembles" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px;">
+                            <figcaption class="text-secondary small mt-2">Environnement des ensembles</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 flex-md-row-reverse">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            Afin d'assurer une diffusion maximale auprès des étudiants, le projet a été pensé pour être accessible au plus grand nombre. En plus de la version conçue pour les casques de réalité virtuelle, une attention particulière a été portée à l'accessibilité multiplateforme.
+                        </p>
+                        <p class="text-light">
+                            L'application exploite ainsi les technologies WebXR, permettant aux utilisateurs ne disposant pas de casque VR d'explorer l'Escape Game directement depuis leur navigateur web standard, garantissant ainsi l'équité pédagogique.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="Math/img/Env2.png" alt="Compatibilité WebXR" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px;">
+                            <figcaption class="text-secondary small mt-2">Environnement des ensembles 2</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center g-4 mb-5">
+                    <div class="col-md-6 text-center d-flex flex-column justify-content-between h-100">
+                        <figure class="m-0">
+                            <img src="Math/img/Env3.png" alt="Salle des vecteurs" class="img-fluid inline-img rounded mx-auto" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px; width: auto; object-fit: contain;">
+                            <figcaption class="text-secondary small mt-3">Salle des vecteurs</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-6 text-center d-flex flex-column justify-content-between h-100">
+                        <figure class="m-0">
+                            <img src="Math/img/Env4.png" alt="Salle des matrices" class="img-fluid inline-img rounded mx-auto" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px; width: auto; object-fit: contain;">
+                            <figcaption class="text-secondary small mt-3">Salle des matrices</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 4. DEFIS TECHNIQUES -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Défis techniques</h3>
+
+
+                <!-- Contribution 1 -->
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">1. Intégration de la VR dans les mécaniques d'énigmes</h5>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-md-7 mb-3 mb-md-0">
+                            <p class="text-light">
+                                Le premier grand défi fut de trouver un moyen conceptuel pertinent pour intégrer les interactions propres à la réalité virtuelle au cœur de la résolution des énigmes mathématiques, afin que la VR apporte une véritable plus-value à l'apprentissage.
+                            </p>
+                        </div>
+                        <div class="col-md-5 text-center">
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contribution 2 -->
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">2. Jouabilité hybride : VR et PC (Clavier/Souris)</h5>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-md-7 mb-3 mb-md-0">
+                            <p class="text-light">
+                                Il a fallu structurer le code et les <i>inputs</i> pour faire en sorte que l'application soit entièrement jouable et ergonomique à l'aide d'un casque de VR, mais également avec des contrôles classiques au clavier et à la souris.
+                            </p>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <figure class="m-0">
+                                <img src="Math/img/VRKeyboard.png" alt="Interface hybride" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Adaptation de l'interface selon le périphérique d'entrée</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contribution 3 -->
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">3. Optimisation et gestion du LOD</h5>
+                    <p class="text-light mt-3">
+                        Une optimisation drastique de l'application a été nécessaire. La mise en place de scripts de LOD (Level of Detail) faisant disparaître dynamiquement certains objets distants permet à l'application de fonctionner sans problème sur WebXR et sur une large gamme d'ordinateurs.
+                    </p>
+                    <div class="row justify-content-center align-items-center g-4 mt-2">
+                        <div class="col-md-6 text-center">
+                            <figure class="m-0">
+                                <img src="Math/img/Lod.png" alt="Différents niveaux de détails (LOD)" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Différents modèles avec le LOD</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <figure class="m-0">
+                                <img src="Math/img/optimisation.png" alt="Algorithme d'optimisation" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Algorithme d'optimisation</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr class="my-5 border-secondary">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FICHE TECHNIQUE -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Fiche technique du projet</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Cadre</strong>
+                                <span class="text-light">Stage de Master 1</span>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Rôle</strong>
+                                <span class="text-light">Développeur VR</span>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">Unity 3D</span>
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">WebXR</span>
+                                    <span class="badge bg-dark border border-secondary">OpenXR</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section class="container py-5">
-        <h3 class="text-white fw-bold mb-4"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
-        <div class="row g-3">
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env1.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env2.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env3.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 3" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env4.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 4" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env5.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 5" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env6.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 6" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env7.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 7" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Env8.png" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Environnement 8" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Stand_Chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Stand de présentation TerrariskVR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/Prix__chal.jpg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Prix de l'innovation obtenu" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre1.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 1" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <img src="TerrariskVR/img/autre2.jpeg" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Capture supplémentaire 2" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+    <!-- GALERIE DU PROJET -->
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Galerie du projet</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/EscapeGameMath_Screenshot.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Aperçu de l'Escape Game" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/Env1.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Salle des ensembles" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/Env2.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Compatibilité WebXR" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/Env3.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Salle des vecteurs" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/Env4.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Salle des matrices" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/VRKeyboard.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Interface et contrôles hybrides" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/Lod.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Optimisation des modèles (LOD)" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="Math/img/optimisation.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Algorithme d'optimisation" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Pied de page -->
     <footer class="bg-body-tertiary text-center py-4 mt-5">
         <div class="container">
             <p class="mb-0">© 2026 Mans Léo Portfolio</p>
@@ -221,13 +322,15 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         </div>
     </footer>
 
+    <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Modal pour la galerie (lightbox) -->
     <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content bg-transparent border-0">
                 <div class="modal-body p-0 text-center position-relative">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Fermer" style="z-index: 10;"></button>
                     <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Vue agrandie">
                     <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
                 </div>
@@ -235,22 +338,32 @@ Pour pallier cela, nous avons développé une expérience en Réalité Virtuelle
         </div>
     </div>
 
+    <!-- Script de la lightbox -->
     <script>
-        const lightboxModal = document.getElementById('lightboxModal');
-        const modalImage = document.getElementById('modalImage');
-        const modalCaption = document.getElementById('modalCaption');
-
-        lightboxModal.addEventListener('show.bs.modal', function (event) {
-            const imageClicked = event.relatedTarget;
-            const src = imageClicked.getAttribute('src');
-            const altText = imageClicked.getAttribute('alt');
-            
-            modalImage.setAttribute('src', src);
-            if(altText) {
-                modalCaption.textContent = altText;
-                modalCaption.classList.remove('d-none');
-            } else {
-                modalCaption.classList.add('d-none');
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightboxModal = document.getElementById('lightboxModal');
+            if (lightboxModal) {
+                lightboxModal.addEventListener('show.bs.modal', function (event) {
+                    const imageClicked = event.relatedTarget;
+                    if (imageClicked) {
+                        const src = imageClicked.getAttribute('src');
+                        const altText = imageClicked.getAttribute('alt');
+                        
+                        const modalImage = document.getElementById('modalImage');
+                        const modalCaption = document.getElementById('modalCaption');
+                        
+                        if (modalImage) modalImage.setAttribute('src', src);
+                        
+                        if (modalCaption) {
+                            if (altText) {
+                                modalCaption.textContent = altText;
+                                modalCaption.classList.remove('d-none');
+                            } else {
+                                modalCaption.classList.add('d-none');
+                            }
+                        }
+                    }
+                });
             }
         });
     </script>

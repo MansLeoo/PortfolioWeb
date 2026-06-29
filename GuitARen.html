@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guit'AR | Mans Léo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        .ratio-16x9 {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .tech-card {
+            background-color: #212529;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+        }
+
+        /* Hover effect for gallery images */
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+        
+        /* Style for inline images */
+        .inline-img {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="Indexen.html">Mans Léo Portfolio</a>
+        
+        <div class="ms-auto d-flex align-items-center gap-3">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle text-uppercase" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-translate me-1"></i> EN
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="GuitAR.html">🇫🇷 Français</a></li>
+                    <li><a class="dropdown-item active" href="#">🇬🇧 English</a></li>
+                </ul>
+            </div>
+
+            <a href="Indexen.html" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-arrow-left"></i> Back
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <section class="container py-5 mt-4">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-10">
+                <div class="mb-3">
+                    <span class="badge bg-primary">Applied Research</span>
+                    <span class="badge border border-primary text-primary">Unity</span>
+                    <span class="badge border border-primary text-primary">AR / Passthrough</span>
+                    <span class="badge border border-primary text-primary">Music</span>
+                </div>
+                <h1 class="display-4 fw-bold text-white">Guit'AR</h1>
+                <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+                    Augmented reality application designed to facilitate intuitive learning of guitar scales using hand tracking.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+                <figure class="m-0">
+                    <img src="GuitAR/img/TestApp.jpg" alt="Application testing by students of the Conservatoire du Grand Chalon" class="img-fluid inline-img rounded w-100" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 500px; object-fit: cover;">
+                    <figcaption class="text-secondary small mt-2">Application testing by students of the Conservatoire du Grand Chalon</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <!-- 1. ACTORS -->
+                <div class="row justify-content-center mb-4 g-4">
+                    <div class="col-md-10">
+                        <div class="card bg-dark border-secondary h-100 shadow-sm d-flex flex-column" style="border-radius: 12px;">
+                            <div class="card-body p-4 flex-grow-1">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-white rounded d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; padding: 5px;">
+                                        <i class="bi bi-music-note-beamed text-primary fs-3"></i>
+                                    </div>
+                                    <h5 class="fw-bold text-white mb-0">Conservatoire du Grand Chalon</h5>
+                                </div>
+                                <p class="text-light mb-0" style="font-size: 0.95rem;">
+                                    Arts education institution. This project was conducted in direct collaboration with the Conservatory to design an innovative educational tool, conceived by and for musicians.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. CONTEXT AND OBJECTIVES -->
+                <h3 class="text-white fw-bold mb-4 mt-5"><i class="bi bi-bullseye text-primary me-2"></i>Context and objectives</h3>
+                
+                <div class="mb-4">
+                    <p class="text-light">
+                        This project is part of a Master's program and was carried out in close collaboration with the Conservatoire de Musique du Grand Chalon, specifically with professor-researcher Mr. Hackerman.
+                    </p>
+                    <p class="text-light">
+                        The objective of this applied research was to experiment with augmented reality as a new educational tool for learning guitar scales, overcoming the limitations of traditional paper sheet music.
+                    </p>
+                </div>
+                
+                <hr class="my-5 border-secondary">
+
+                <!-- 3. DEVELOPED APPLICATION -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-headset-vr text-primary me-2"></i>The developed application</h3>
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            An augmented reality application was developed, allowing users to visualize scale diagrams and move them freely within their field of view. This represents a major ergonomic advantage compared to a simple sheet of paper on a music stand.
+                        </p>
+                        <p class="text-light">
+                            Furthermore, to facilitate visual learning, these scales can be displayed directly on a 3D virtual guitar. Users can thus see the exact finger placement in a "mirror" view and reproduce it on their own guitar. For practical and immersive reasons, the application uses hand tracking, completely freeing the musician from VR controllers.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="GuitAR/img/Interface.png" alt="User interface and scale display" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px;">
+                            <figcaption class="text-secondary small mt-2">Spatial interface and diagram display</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5 flex-md-row-reverse">
+                    <div class="col-md-7 mb-3 mb-md-0">
+                        <p class="text-light">
+                            The initial objective also included real-time tracking of a physical guitar to superimpose notes directly onto it. Tests were conducted using QR codes placed on the instrument, but were not entirely conclusive within the allotted time.
+                        </p>
+                        <p class="text-light">
+                            Finally, this experimentation highlighted certain hardware limitations for this specific use case. Challenges related to Passthrough camera resolution for reading fine details, as well as the slight latency perceived during fast playing movements, were notably documented.
+                        </p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <figure class="m-0">
+                            <img src="GuitAR/img/GuitAR1.png" alt="Virtual guitar displaying notes" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 250px;">
+                            <figcaption class="text-secondary small mt-2">Visualization of placements on the virtual guitar</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+                <!-- 4. TECHNICAL CHALLENGES -->
+                <h3 class="text-white fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>Technical challenges</h3>
+
+                <!-- Contribution 1 -->
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">1. Spatial interface and hand tracking</h5>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-md-7 mb-3 mb-md-0">
+                            <p class="text-light">
+                                Design of a user interface intuitively manipulable with hands, such as pinching to grab or swiping to move. The user interacts with floating panels containing the scales, without ever needing to let go of the guitar to grab a controller.
+                            </p>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <figure class="m-0">
+                                <img src="GuitAR/img/Interface2.png" alt="Interface with grab handle" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Interface with manipulation handle</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 2 -->
+                <div class="mb-5">
+                    <h5 class="fw-bold text-light">2. Instrument tracking prototyping</h5>
+                    <p class="text-light mt-3">
+                        Research and implementation of solutions for tracking a physical guitar in space. Several approaches were experimented with, with and without the use of QR codes and fiducial markers, attempting to anchor holograms directly onto the neck of the moving instrument.
+                    </p>
+                    <div class="row justify-content-center align-items-center g-4 mt-2">
+                        <div class="col-md-4 text-center">
+                            <figure class="m-0">
+                                <img src="GuitAR/img/QrCode.png" alt="Tracking tests via QR code" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Experimentation of tracking via markers</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <figure class="m-0">
+                                <img src="GuitAR/img/Positions.png" alt="Tracking limitations via QR Code" class="img-fluid inline-img rounded" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in; max-height: 220px; width: auto; object-fit: contain;">
+                                <figcaption class="text-secondary small mt-2">Occlusion and viewing angle issues related to the QR Code</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5 border-secondary">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SHEET -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card bg-dark border-secondary shadow-sm" style="border-radius: 12px;">
+                    <div class="card-header bg-secondary bg-opacity-25 border-secondary text-white py-3">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-gear-fill text-primary me-2"></i>Project technical sheet</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Context</strong>
+                                <span class="text-light">Master's Project</span>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <strong class="d-block text-secondary text-uppercase small mb-1">Role</strong>
+                                <span class="text-light">AR Developer</span>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <strong class="d-block text-secondary text-uppercase small mb-2">Technologies</strong>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary">Unity 3D</span>
+                                    <span class="badge bg-dark border border-secondary">C#</span>
+                                    <span class="badge bg-dark border border-secondary">Meta XR SDK</span>
+                                    <span class="badge bg-dark border border-secondary">Passthrough AR</span>
+                                    <span class="badge bg-dark border border-secondary">Hand Tracking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT GALLERY -->
+    <section class="container py-5 border-top border-secondary mt-3">
+        <h3 class="text-white fw-bold mb-4 text-center"><i class="bi bi-images text-primary me-2"></i>Project gallery</h3>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-3">
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/Guitar.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Virtual guitar" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/GuitAR1.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="User interface" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/GuitAR3.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="User interface" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/QrCode.png" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="Guitar with QR Code" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="GuitAR/img/TestApp.jpg" loading="lazy" class="img-fluid rounded-4 shadow-sm h-100 object-fit-cover gallery-img" alt="User testing at the Conservatory" data-bs-toggle="modal" data-bs-target="#lightboxModal" style="cursor: zoom-in;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2026 Mans Léo Portfolio</p>
+            <a href="Indexen.html" class="small text-decoration-none">Back to home</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Gallery Modal (lightbox) -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-sm" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <img src="" id="modalImage" class="img-fluid rounded-4 shadow-lg" alt="Enlarged view">
+                    <p id="modalCaption" class="text-white mt-3 fs-5 fw-bold bg-dark bg-opacity-75 d-inline-block px-3 py-1 rounded-pill"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightboxModal = document.getElementById('lightboxModal');
+            if (lightboxModal) {
+                lightboxModal.addEventListener('show.bs.modal', function (event) {
+                    const imageClicked = event.relatedTarget;
+                    if (imageClicked) {
+                        const src = imageClicked.getAttribute('src');
+                        const altText = imageClicked.getAttribute('alt');
+                        
+                        const modalImage = document.getElementById('modalImage');
+                        const modalCaption = document.getElementById('modalCaption');
+                        
+                        if (modalImage) modalImage.setAttribute('src', src);
+                        
+                        if (modalCaption) {
+                            if (altText) {
+                                modalCaption.textContent = altText;
+                                modalCaption.classList.remove('d-none');
+                            } else {
+                                modalCaption.classList.add('d-none');
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
