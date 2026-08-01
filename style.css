@@ -1,0 +1,81 @@
+/* style.css — feuille de style commune du portfolio Léo Mans */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-section {
+    padding: 100px 0;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+    transform: translateY(-5px);
+        border-color: rgba(13,110,253,0.6) !important;
+
+}
+
+.timeline-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.ratio-16x9 {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tech-card {
+    background-color: #212529;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+}
+
+.gallery-img {
+    transition: transform 0.3s ease;
+}
+.gallery-img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.inline-img {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+/* Research interest cards — même bordure que My Background */
+.research-card {
+    border: 1px solid #495057 !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+    transition: border-color 180ms ease, transform 180ms ease;
+}
+.research-card:hover {
+    border-color: rgba(13,110,253,0.6) !important;
+    transform: translateY(-3px);
+}
+.research-card p {
+    color: #d8d6d3 !important;
+    line-height: 1.55;
+}
